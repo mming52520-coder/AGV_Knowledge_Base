@@ -38,7 +38,7 @@ tags: [AGV, ROS, Node, relay]
 
 ## Launch
 
-- `src/remote_ctrl/launch/remote_ctrl.launch（一/二号车）`
+- `src/remote_ctrl/launch/remote_ctrl.launch`（一/二号车）
 
 ## 源码证据
 

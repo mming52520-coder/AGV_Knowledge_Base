@@ -38,7 +38,7 @@ tags: [AGV, ROS, Node, trajectory_recorder]
 
 ## Launch
 
-- `src/bringup/launch/all_nodes.launch（三号车）`
+- `src/bringup/launch/all_nodes.launch`（三号车）
 - `src/remote_ctrl/launch/steering_motor_only.launch`
 - `src/remote_ctrl/launch/steering_only.launch`
 

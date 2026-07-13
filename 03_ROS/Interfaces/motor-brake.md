@@ -7,7 +7,7 @@ message_type: "std_msgs/UInt8"
 status: compatibility
 review: verified
 project: AGV
-related_packages: ["[[../Packages/remote_ctrl]]", "[[../Packages/wheeltec_base]]", "[[../Packages/relay]]"]
+related_packages: ["[[../Packages/remote_ctrl]]", "[[../Packages/wheeltec_base]]", "[[../Packages/relay]]", "[[../Packages/agv_mqtt_bridge]]"]
 source_scope: 三号车当前工作区与车辆差异
 source_snapshot: "448336f86dd9debc9362e3262da712fa95c04a986863211d9b865d7bbba09d96"
 updated: 2026-07-14
@@ -23,14 +23,16 @@ tags: [AGV, ROS, Interface]
 ## 通信关系
 
 - 生产者/服务端：`remote_controller（一/二号车）`
-- 消费者/客户端：`cmd_vel_adapter`、`hk_dio_remote`
+- 消费者/客户端：`cmd_vel_adapter`、`hk_dio_remote`、`agv_mqtt_bridge`
 - 消息或服务类型：`std_msgs/UInt8`
 
 ## 证据
 
-- 三号车 `src/remote_ctrl/src/remote_controller.cpp（一号车）:67`
+- 一号车 `src/remote_ctrl/src/remote_controller.cpp:67`
+- 二号车 `src/remote_ctrl/src/remote_controller.cpp:73`
 - 三号车 `src/wheeltec_base/src/cmd_vel_adapter.cpp:15,50`
 - 三号车 `src/relay/src/hk_dio_remote.cpp:131`
+- 三号车 `src/agv_mqtt_bridge/scripts/agv_mqtt_bridge.py:598-600`
 
 ## 复核说明
 
@@ -41,5 +43,6 @@ tags: [AGV, ROS, Interface]
 - [[../Packages/remote_ctrl]]
 - [[../Packages/wheeltec_base]]
 - [[../Packages/relay]]
+- [[../Packages/agv_mqtt_bridge]]
 
 - [[../ROS接口目录|返回接口目录]]

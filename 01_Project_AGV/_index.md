@@ -7,8 +7,17 @@ tags: [AGV, 项目]
 
 # AGV 项目
 
-记录项目目标、范围、里程碑、角色职责、任务分解、版本与交付物。
+## 入口
 
-- 待创建：项目总览
-- 待创建：系统技术路线
+- [[AGV系统总览]]
+- [[车辆版本图谱]]
+- [[AGV知识图谱.canvas|AGV 知识图谱 Canvas]]
+
+```dataview
+TABLE type AS 类型, status AS 状态, review AS 复核
+FROM "01_Project_AGV"
+WHERE file.name != "_index"
+SORT file.name ASC
+```
+
 - [[../知识库首页|返回知识库首页]]

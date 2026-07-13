@@ -7,8 +7,16 @@ tags: [AGV, 控制]
 
 # 控制
 
-记录感知—决策—执行分层、控制权仲裁、速度接口、PID 和安全控制。
+## 入口
 
-- 待创建：控制架构总览
-- 待创建：控制权仲裁
+- [[控制架构总览]]
+- [[控制权仲裁]]
+
+```dataview
+TABLE type AS 类型, status AS 状态, review AS 复核
+FROM "05_Control"
+WHERE file.name != "_index"
+SORT file.name ASC
+```
+
 - [[../知识库首页|返回知识库首页]]

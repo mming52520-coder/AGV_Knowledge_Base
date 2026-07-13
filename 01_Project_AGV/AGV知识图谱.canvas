@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {"id":"source","type":"file","file":"00_System/代码来源与扫描范围.md","x":-900,"y":-720,"width":360,"height":200},
+    {"id":"schema","type":"file","file":"00_System/知识图谱Schema.md","x":-450,"y":-720,"width":360,"height":200},
+    {"id":"system","type":"file","file":"01_Project_AGV/AGV系统总览.md","x":0,"y":-720,"width":360,"height":200},
+    {"id":"coverage","type":"file","file":"00_System/Knowledge-Graph-Coverage.md","x":450,"y":-720,"width":360,"height":200},
+    {"id":"variants","type":"file","file":"01_Project_AGV/车辆版本图谱.md","x":900,"y":-720,"width":360,"height":200},
+    {"id":"layer1","type":"file","file":"01_Project_AGV/Layers/启动与外部通信层.md","x":-1100,"y":-360,"width":320,"height":180},
+    {"id":"layer2","type":"file","file":"01_Project_AGV/Layers/任务与应用编排层.md","x":-720,"y":-360,"width":320,"height":180},
+    {"id":"layer3","type":"file","file":"01_Project_AGV/Layers/导航决策与安全层.md","x":-340,"y":-360,"width":320,"height":180},
+    {"id":"layer4","type":"file","file":"01_Project_AGV/Layers/底盘与执行抽象层.md","x":40,"y":-360,"width":320,"height":180},
+    {"id":"layer5","type":"file","file":"01_Project_AGV/Layers/传感器与设备驱动层.md","x":420,"y":-360,"width":320,"height":180},
+    {"id":"layer6","type":"file","file":"01_Project_AGV/Layers/物理硬件层.md","x":800,"y":-360,"width":320,"height":180},
+    {"id":"hardware","type":"file","file":"02_Hardware/硬件系统总览.md","x":-720,"y":40,"width":360,"height":200},
+    {"id":"ros","type":"file","file":"03_ROS/ROS系统总览.md","x":-240,"y":40,"width":360,"height":200},
+    {"id":"navigation","type":"file","file":"04_Navigation/导航系统总览.md","x":240,"y":40,"width":360,"height":200},
+    {"id":"control","type":"file","file":"05_Control/控制架构总览.md","x":720,"y":40,"width":360,"height":200}
+  ],
+  "edges": [
+    {"id":"e1","fromNode":"source","fromSide":"right","toNode":"system","toSide":"left"},
+    {"id":"e2","fromNode":"schema","fromSide":"right","toNode":"system","toSide":"left"},
+    {"id":"e3","fromNode":"system","fromSide":"right","toNode":"coverage","toSide":"left"},
+    {"id":"e4","fromNode":"variants","fromSide":"left","toNode":"system","toSide":"right"},
+    {"id":"e5","fromNode":"system","fromSide":"bottom","toNode":"layer1","toSide":"top"},
+    {"id":"e6","fromNode":"layer1","fromSide":"right","toNode":"layer2","toSide":"left"},
+    {"id":"e7","fromNode":"layer2","fromSide":"right","toNode":"layer3","toSide":"left"},
+    {"id":"e8","fromNode":"layer3","fromSide":"right","toNode":"layer4","toSide":"left"},
+    {"id":"e9","fromNode":"layer4","fromSide":"right","toNode":"layer5","toSide":"left"},
+    {"id":"e10","fromNode":"layer5","fromSide":"right","toNode":"layer6","toSide":"left"},
+    {"id":"e11","fromNode":"layer6","fromSide":"bottom","toNode":"hardware","toSide":"top"},
+    {"id":"e12","fromNode":"layer1","fromSide":"bottom","toNode":"ros","toSide":"top"},
+    {"id":"e13","fromNode":"layer3","fromSide":"bottom","toNode":"navigation","toSide":"top"},
+    {"id":"e14","fromNode":"layer4","fromSide":"bottom","toNode":"control","toSide":"top"}
+  ]
+}

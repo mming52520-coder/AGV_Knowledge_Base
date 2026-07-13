@@ -7,8 +7,15 @@ tags: [AGV, 硬件]
 
 # 硬件
 
-记录底盘、驱动、电池、充电、磁传感器、超声波、安全器件和电气接口。
+## 入口
 
-- 待创建：硬件系统总览
-- 待创建：接口与选型清单
+- [[硬件系统总览]]
+
+```dataview
+TABLE status AS 状态, review AS 复核
+FROM "02_Hardware"
+WHERE type = "hardware"
+SORT file.name ASC
+```
+
 - [[../知识库首页|返回知识库首页]]

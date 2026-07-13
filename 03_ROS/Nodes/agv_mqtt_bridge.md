@@ -10,7 +10,7 @@ vehicles: [一号车, 二号车, 三号车]
 package: "[[../Packages/agv_mqtt_bridge]]"
 parent: "[[../../01_Project_AGV/Layers/启动与外部通信层]]"
 publishes: []
-subscribes: ["[[../Interfaces/odom]]", "[[../Interfaces/imu]]", "[[../Interfaces/battery-h56br-status]]", "[[../Interfaces/battery-h56br-soc]]", "[[../Interfaces/mag-sensor-frame]]", "[[../Interfaces/mag-sensor-nail-event]]", "[[../Interfaces/ultrasonic-distance]]", "[[../Interfaces/ultrasonic-status]]", "[[../Interfaces/trajectory-status]]", "[[../Interfaces/agv-task-state]]"]
+subscribes: ["[[../Interfaces/odom]]", "[[../Interfaces/imu]]", "[[../Interfaces/battery-h56br-status]]", "[[../Interfaces/battery-h56br-soc]]", "[[../Interfaces/mag-sensor-frame]]", "[[../Interfaces/mag-sensor-nail-event]]", "[[../Interfaces/ultrasonic-distance]]", "[[../Interfaces/ultrasonic-status]]", "[[../Interfaces/trajectory-status]]", "[[../Interfaces/agv-task-state]]", "[[../Interfaces/motor-command]]", "[[../Interfaces/motor-speed]]", "[[../Interfaces/motor-brake]]"]
 provides_services: []
 source_scope: 三号车当前工作区与车辆差异
 source_snapshot: "448336f86dd9debc9362e3262da712fa95c04a986863211d9b865d7bbba09d96"
@@ -43,6 +43,9 @@ tags: [AGV, ROS, Node, agv_mqtt_bridge]
 - 订阅：[[../Interfaces/ultrasonic-status]]
 - 订阅：[[../Interfaces/trajectory-status]]
 - 订阅：[[../Interfaces/agv-task-state]]
+- 订阅：[[../Interfaces/motor-command]]
+- 订阅：[[../Interfaces/motor-speed]]
+- 订阅：[[../Interfaces/motor-brake]]
 
 ## Launch
 
