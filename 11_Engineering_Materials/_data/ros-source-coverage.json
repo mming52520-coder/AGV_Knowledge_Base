@@ -1,0 +1,287 @@
+{
+  "accounting": {
+    "all_files_accounted_for": true,
+    "classified_file_count": 23256,
+    "classified_total_bytes": 130169126820
+  },
+  "boundaries": {
+    "code": "Tutorial/project code mirrors and build outputs are excluded; code evolution is handled by the independent V2 snapshot.",
+    "copyright": "No source documents, long excerpts or images are copied into the generated graph.",
+    "model_mismatch": "C10B/L150/R3mini/reference material cannot serve as implementation evidence for current three-car code.",
+    "security": "No installers, activation tools, executables, credentials, network values, raw logs, bags or trajectories are copied."
+  },
+  "category_summary": [
+    {
+      "category": "excluded_archive_or_incomplete_download",
+      "disposition": "excluded",
+      "file_count": 296,
+      "reason": "压缩包、磁盘镜像或未完成的云下载；不解压、不执行。",
+      "total_bytes": 71202750310
+    },
+    {
+      "category": "excluded_code_or_build_mirror",
+      "disposition": "excluded",
+      "file_count": 15291,
+      "reason": "教程/源码镜像、node_modules、build/devel/install 产物或仓库元数据；代码由独立 V2 扫描处理。",
+      "total_bytes": 128415067
+    },
+    {
+      "category": "excluded_duplicate_or_superseded",
+      "disposition": "excluded",
+      "file_count": 2,
+      "reason": "提取文本等价的镜像或已被更新的版本；仅保留规范或最新来源。",
+      "total_bytes": 1160991
+    },
+    {
+      "category": "excluded_generic_or_root_material",
+      "disposition": "excluded",
+      "file_count": 4,
+      "reason": "无法形成有依据的独特工程主张的根目录或杂项目资料。",
+      "total_bytes": 7761993
+    },
+    {
+      "category": "excluded_installer_activation_binary",
+      "disposition": "excluded",
+      "file_count": 3492,
+      "reason": "安装器、破解/激活工具、打包应用、可执行文件或二进制依赖。",
+      "total_bytes": 18809576261
+    },
+    {
+      "category": "excluded_mechanical_arm_or_unrelated_platform",
+      "disposition": "excluded",
+      "file_count": 192,
+      "reason": "R550A 机械臂/MoveIt 或其他无关平台资料，不属于三号车范围。",
+      "total_bytes": 6390679143
+    },
+    {
+      "category": "excluded_media_or_image",
+      "disposition": "excluded",
+      "file_count": 759,
+      "reason": "视频、音频或批量图片资产；不属于本轮精选语义图谱范围。",
+      "total_bytes": 30819923346
+    },
+    {
+      "category": "excluded_sensitive_or_runtime_data",
+      "disposition": "excluded",
+      "file_count": 16,
+      "reason": "凭据/网络配置、日志、bag、轨迹或其他运行数据。",
+      "total_bytes": 618346981
+    },
+    {
+      "category": "excluded_tutorial_or_generic_training",
+      "disposition": "excluded",
+      "file_count": 27,
+      "reason": "通用 ROS/Linux 教程或未完成课程下载，不能为三号车提供直接证据。",
+      "total_bytes": 250144507
+    },
+    {
+      "category": "excluded_unselected_model_reference",
+      "disposition": "excluded",
+      "file_count": 87,
+      "reason": "未选择的 C10B/L150/R3mini 型号资料、重复示例或教程代码；明确保留型号不匹配边界。",
+      "total_bytes": 116013873
+    },
+    {
+      "category": "excluded_unselected_project_material",
+      "disposition": "excluded",
+      "file_count": 3056,
+      "reason": "经相关性、重复、安全和来源边界审查后未选择的项目树资料。",
+      "total_bytes": 1761510963
+    },
+    {
+      "category": "excluded_vendor_boilerplate",
+      "disposition": "excluded",
+      "file_count": 3,
+      "reason": "厂商联系、版权或更新说明等样板内容，不含本图谱所需工程信息。",
+      "total_bytes": 699749
+    },
+    {
+      "category": "included_curated_source",
+      "disposition": "included-metadata-and-summary",
+      "file_count": 29,
+      "reason": "已选择的规范工程来源；图谱只登记元数据、哈希、定位和原创摘要。",
+      "total_bytes": 61741621
+    },
+    {
+      "category": "registered_duplicate_alias",
+      "disposition": "registered-alias-not-copied",
+      "file_count": 2,
+      "reason": "规范来源的字节级相同别名；只作为来源身份元数据登记。",
+      "total_bytes": 402015
+    }
+  ],
+  "coverage_id": "agv:material-coverage:ros-engineering-files:v1",
+  "curated_canonical_source_count": 29,
+  "curated_outside_historical_subroot_count": 9,
+  "excluded_content_mirror_count": 1,
+  "excluded_superseded_revision_count": 1,
+  "generated": "2026-07-14",
+  "inventory": {
+    "directory_count": 2678,
+    "file_count": 23256,
+    "inventory_fingerprint": "3711a66754c17b097dc3f8d60ff14d47e68fd0fbcac1df39114edbe928d507ca",
+    "total_bytes": 130169126820,
+    "walk_errors": []
+  },
+  "registered_duplicate_alias_count": 2,
+  "root": "D:\\ROS工程文件",
+  "schema_version": "1.0.0",
+  "top_level_scope": [
+    {
+      "categories": {
+        "excluded_generic_or_root_material": 1
+      },
+      "directory_count": 0,
+      "entry_kind": "file",
+      "file_count": 1,
+      "name": "1.Ubuntu配置教程.pdf",
+      "total_bytes": 5148607
+    },
+    {
+      "categories": {
+        "excluded_archive_or_incomplete_download": 1
+      },
+      "directory_count": 0,
+      "entry_kind": "file",
+      "file_count": 1,
+      "name": "CP2102修改串口号软件(除串口号，其它不可修改).zip",
+      "total_bytes": 40416933
+    },
+    {
+      "categories": {
+        "included_curated_source": 1
+      },
+      "directory_count": 0,
+      "entry_kind": "file",
+      "file_count": 1,
+      "name": "ROS主机中设置开机自启动程序.txt",
+      "total_bytes": 487
+    },
+    {
+      "categories": {
+        "excluded_archive_or_incomplete_download": 4,
+        "excluded_tutorial_or_generic_training": 1
+      },
+      "directory_count": 4,
+      "entry_kind": "directory",
+      "file_count": 5,
+      "name": "ros理论与实践学习",
+      "total_bytes": 943500669
+    },
+    {
+      "categories": {
+        "excluded_mechanical_arm_or_unrelated_platform": 192
+      },
+      "directory_count": 97,
+      "entry_kind": "directory",
+      "file_count": 192,
+      "name": "ROS资料最新",
+      "total_bytes": 6390679143
+    },
+    {
+      "categories": {
+        "excluded_generic_or_root_material": 1
+      },
+      "directory_count": 0,
+      "entry_kind": "file",
+      "file_count": 1,
+      "name": "rqt可视化工具集.pdf",
+      "total_bytes": 1401127
+    },
+    {
+      "categories": {
+        "excluded_installer_activation_binary": 2273
+      },
+      "directory_count": 191,
+      "entry_kind": "directory",
+      "file_count": 2273,
+      "name": "SolidWorks 2025 64bit",
+      "total_bytes": 16599615333
+    },
+    {
+      "categories": {
+        "excluded_installer_activation_binary": 593
+      },
+      "directory_count": 37,
+      "entry_kind": "directory",
+      "file_count": 593,
+      "name": "visio安装包和激活工具",
+      "total_bytes": 222288591
+    },
+    {
+      "categories": {
+        "excluded_vendor_boilerplate": 3
+      },
+      "directory_count": 2,
+      "entry_kind": "directory",
+      "file_count": 3,
+      "name": "WHEELTEC 直流电机附送资料",
+      "total_bytes": 699749
+    },
+    {
+      "categories": {
+        "excluded_generic_or_root_material": 1
+      },
+      "directory_count": 0,
+      "entry_kind": "file",
+      "file_count": 1,
+      "name": "串口插头连接器.doc",
+      "total_bytes": 610816
+    },
+    {
+      "categories": {
+        "excluded_generic_or_root_material": 1
+      },
+      "directory_count": 0,
+      "entry_kind": "file",
+      "file_count": 1,
+      "name": "串口插头连接器.pdf",
+      "total_bytes": 601443
+    },
+    {
+      "categories": {
+        "excluded_archive_or_incomplete_download": 42,
+        "excluded_duplicate_or_superseded": 2,
+        "excluded_installer_activation_binary": 17,
+        "excluded_media_or_image": 59,
+        "excluded_unselected_model_reference": 87,
+        "included_curated_source": 8
+      },
+      "directory_count": 124,
+      "entry_kind": "directory",
+      "file_count": 215,
+      "name": "二驱C10B",
+      "total_bytes": 5438269959
+    },
+    {
+      "categories": {
+        "excluded_archive_or_incomplete_download": 26,
+        "excluded_installer_activation_binary": 2,
+        "excluded_media_or_image": 6,
+        "excluded_tutorial_or_generic_training": 26
+      },
+      "directory_count": 19,
+      "entry_kind": "directory",
+      "file_count": 60,
+      "name": "入门教程-强烈推荐",
+      "total_bytes": 3136304695
+    },
+    {
+      "categories": {
+        "excluded_archive_or_incomplete_download": 223,
+        "excluded_code_or_build_mirror": 15291,
+        "excluded_installer_activation_binary": 607,
+        "excluded_media_or_image": 694,
+        "excluded_sensitive_or_runtime_data": 16,
+        "excluded_unselected_project_material": 3056,
+        "included_curated_source": 20,
+        "registered_duplicate_alias": 2
+      },
+      "directory_count": 2204,
+      "entry_kind": "directory",
+      "file_count": 19909,
+      "name": "推料车项目树莓派移植",
+      "total_bytes": 97389589268
+    }
+  ]
+}

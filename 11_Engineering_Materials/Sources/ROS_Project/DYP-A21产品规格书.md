@@ -15,6 +15,7 @@ authority: "A"
 confidentiality: "internal"
 extraction_status: "curated"
 duplicate_aliases: []
+content_mirrors_excluded: []
 updated: "2026-07-14"
 tags: ["AGV", "工程资料", "来源节点"]
 ---
@@ -45,6 +46,15 @@ DYP-A21 量程、异常值与 CAN 协议说明。
 ## 重复别名
 
 - 无。
+
+## 已排除内容镜像
+
+- 无。
+
+## 模型与实现边界
+
+- 模型范围：项目或通用工程资料。
+- 实现边界：按结论节点的事实状态和适用快照解释，不跨版本外推。
 
 ## 已抽取结论
 

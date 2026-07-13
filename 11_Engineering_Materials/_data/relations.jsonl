@@ -1,3 +1,5 @@
+{"from_entity_uid":"agv:claim:ackermann-kinematics-reference-model","implementation_evidence":"theory-only","match_score":72,"match_status":"needs-review","predicate":"related_theory","to_entity_uid":"agv:navigation:trajectory-system"}
+{"from_entity_uid":"agv:claim:ackermann-kinematics-reference-model","implementation_evidence":"theory-only","match_score":65,"match_status":"needs-review","predicate":"related_theory","to_entity_uid":"agv:ros:node:odometer"}
 {"from_entity_uid":"agv:claim:ackermann-multimode-design-proposal","implementation_evidence":"planned-only","match_score":92,"match_status":"accepted","predicate":"proposes","to_entity_uid":"agv:control:authority-arbitration"}
 {"from_entity_uid":"agv:claim:ackermann-multimode-design-proposal","implementation_evidence":"planned-only","match_score":92,"match_status":"accepted","predicate":"proposes","to_entity_uid":"agv:navigation:magnetic"}
 {"from_entity_uid":"agv:claim:ackermann-multimode-design-proposal","implementation_evidence":"planned-only","match_score":96,"match_status":"accepted","predicate":"proposes","to_entity_uid":"agv:navigation:trajectory-system"}
@@ -5,11 +7,17 @@
 {"from_entity_uid":"agv:claim:ackermann-proposal-interface-gap","implementation_evidence":"coverage-candidate","match_score":78,"match_status":"needs-review","predicate":"indicates_coverage_gap","to_entity_uid":"agv:system:knowledge-graph-coverage"}
 {"from_entity_uid":"agv:claim:ackermann-proposal-interface-gap","implementation_evidence":"coverage-candidate","match_score":80,"match_status":"needs-review","predicate":"related_to","to_entity_uid":"agv:ros:node:odometer"}
 {"from_entity_uid":"agv:claim:bringup-historical-entry","implementation_evidence":"historical-document","match_score":98,"match_status":"accepted","predicate":"deprecates_in_context","to_entity_uid":"agv:ros:package:bringup"}
+{"from_entity_uid":"agv:claim:c10b-mainboard-reference-schematic","implementation_evidence":"reference-model-mismatch","match_score":65,"match_status":"needs-review","predicate":"reference","to_entity_uid":"agv:hardware:stm32-chassis"}
+{"from_entity_uid":"agv:claim:c10b-mcu-app-reference-protocol","implementation_evidence":"reference-model-mismatch","match_score":55,"match_status":"needs-review","predicate":"reference","to_entity_uid":"agv:control:overview"}
+{"from_entity_uid":"agv:claim:c10b-reference-platform-serial-control","implementation_evidence":"reference-model-mismatch","match_score":78,"match_status":"needs-review","predicate":"reference","to_entity_uid":"agv:hardware:stm32-chassis"}
+{"from_entity_uid":"agv:claim:c10b-reference-platform-serial-control","implementation_evidence":"reference-model-mismatch","match_score":88,"match_status":"needs-review","predicate":"reference","to_entity_uid":"agv:ros:node:wheeltec_robot_node"}
+{"from_entity_uid":"agv:claim:c10b-resource-allocation-reference","implementation_evidence":"reference-model-mismatch","match_score":70,"match_status":"needs-review","predicate":"reference","to_entity_uid":"agv:hardware:stm32-chassis"}
 {"from_entity_uid":"agv:claim:devices-yaml-not-authoritative","implementation_evidence":"document-only","match_score":88,"match_status":"needs-review","predicate":"configuration_constraint","to_entity_uid":"agv:ros:package:trajectory_recorder"}
 {"from_entity_uid":"agv:claim:dyp-a21-can-protocol","implementation_evidence":"vendor-specification","match_score":100,"match_status":"accepted","predicate":"specifies","to_entity_uid":"agv:hardware:dyp-a21-ultrasonic"}
 {"from_entity_uid":"agv:claim:dyp-a21-can-protocol","implementation_evidence":"verified-static","match_score":100,"match_status":"accepted","predicate":"specifies_payload_for","to_entity_uid":"agv:ros:interface:ultrasonic-distance"}
 {"from_entity_uid":"agv:claim:dyp-a21-can-protocol","implementation_evidence":"verified-static","match_score":100,"match_status":"accepted","predicate":"specifies_payload_for","to_entity_uid":"agv:ros:interface:ultrasonic-status"}
 {"from_entity_uid":"agv:claim:dyp-a21-can-protocol","implementation_evidence":"verified-static","match_score":100,"match_status":"accepted","predicate":"specifies_protocol_for","to_entity_uid":"agv:ros:node:dyp_a21_can_node"}
+{"from_entity_uid":"agv:claim:electromagnetic-guidance-three-channel-reference","implementation_evidence":"theory-only","match_score":68,"match_status":"needs-review","predicate":"related_theory","to_entity_uid":"agv:navigation:magnetic"}
 {"from_entity_uid":"agv:claim:h56-modbus-soc-status-protocol","implementation_evidence":"vendor-specification","match_score":100,"match_status":"accepted","predicate":"specifies","to_entity_uid":"agv:hardware:h56br-battery-meter"}
 {"from_entity_uid":"agv:claim:h56-modbus-soc-status-protocol","implementation_evidence":"verified-static","match_score":100,"match_status":"accepted","predicate":"specifies_payload_for","to_entity_uid":"agv:ros:interface:battery-h56br-soc"}
 {"from_entity_uid":"agv:claim:h56-modbus-soc-status-protocol","implementation_evidence":"verified-static","match_score":100,"match_status":"accepted","predicate":"specifies_payload_for","to_entity_uid":"agv:ros:interface:battery-h56br-status"}
@@ -19,6 +27,7 @@
 {"from_entity_uid":"agv:claim:huakong-digital-io-protocol","implementation_evidence":"vendor-specification","match_score":99,"match_status":"accepted","predicate":"specifies","to_entity_uid":"agv:hardware:huakong-io-analog"}
 {"from_entity_uid":"agv:claim:huakong-digital-io-protocol","implementation_evidence":"verified-static-with-launch-review","match_score":98,"match_status":"needs-review","predicate":"specifies_payload_for","to_entity_uid":"agv:ros:interface:relay-io-status"}
 {"from_entity_uid":"agv:claim:huakong-digital-io-protocol","implementation_evidence":"verified-static","match_score":100,"match_status":"accepted","predicate":"specifies_protocol_for","to_entity_uid":"agv:ros:node:hk_dio_controller"}
+{"from_entity_uid":"agv:claim:legacy-autostart-note-security-boundary","implementation_evidence":"legacy-reference-only","match_score":55,"match_status":"needs-review","predicate":"reference","to_entity_uid":"agv:ros:package:bringup"}
 {"from_entity_uid":"agv:claim:ms16a-protocol-and-baud-constraint","implementation_evidence":"verified-static-with-runtime-check","match_score":99,"match_status":"needs-review","predicate":"configuration_constraint","to_entity_uid":"agv:ros:node:mag_sensor_reader"}
 {"from_entity_uid":"agv:claim:ms16a-protocol-and-baud-constraint","implementation_evidence":"vendor-specification","match_score":100,"match_status":"accepted","predicate":"specifies","to_entity_uid":"agv:hardware:ms16a-magnetic-sensor"}
 {"from_entity_uid":"agv:claim:ms16a-protocol-and-baud-constraint","implementation_evidence":"verified-static","match_score":100,"match_status":"accepted","predicate":"specifies_protocol_for","to_entity_uid":"agv:ros:interface:mag-sensor-raw-data"}
@@ -48,6 +57,7 @@
 {"from_entity_uid":"agv:claim:udev-stable-device-aliases","implementation_evidence":"planned-only","match_score":82,"match_status":"needs-review","predicate":"proposes","to_entity_uid":"agv:hardware:serial-can-rs485"}
 {"from_entity_uid":"agv:claim:ultrasonic-sensing-reference","implementation_evidence":"theory-only","match_score":60,"match_status":"weak-candidate","predicate":"related_theory","to_entity_uid":"agv:navigation:ultrasonic-safety"}
 {"from_entity_uid":"agv:claim:wheel-robot-kinematics-reference","implementation_evidence":"theory-only","match_score":60,"match_status":"weak-candidate","predicate":"related_theory","to_entity_uid":"agv:navigation:trajectory-system"}
+{"from_entity_uid":"agv:claim:wheeltec-pid-control-reference","implementation_evidence":"theory-only","match_score":60,"match_status":"weak-candidate","predicate":"related_theory","to_entity_uid":"agv:control:overview"}
 {"from_entity_uid":"agv:claim:yz-aim-register-protocol","implementation_evidence":"vendor-specification","match_score":88,"match_status":"needs-review","predicate":"specifies_component_of","to_entity_uid":"agv:hardware:oid-yz-aim-motor-controller"}
 {"from_entity_uid":"agv:claim:yz-aim-register-protocol","implementation_evidence":"verified-static","match_score":97,"match_status":"accepted","predicate":"specifies_protocol_for","to_entity_uid":"agv:ros:node:chassis_bridge"}
 {"from_entity_uid":"agv:claim:yz-aim-register-protocol","implementation_evidence":"verified-static","match_score":95,"match_status":"accepted","predicate":"specifies_protocol_for","to_entity_uid":"agv:ros:node:steering_remote"}
@@ -59,11 +69,18 @@
 {"from_entity_uid":"agv:source:learning:slam-theory-practice","predicate":"supports_claim","source_locator":"PDF 第 64-115 页，第 3 章","to_entity_uid":"agv:claim:slam-inertial-fusion-reference"}
 {"from_entity_uid":"agv:source:ros:ackermann-magnetic-trajectory-proposal","predicate":"supports_claim","source_locator":"OOXML 中节点、话题与融合流程段落","to_entity_uid":"agv:claim:ackermann-proposal-interface-gap"}
 {"from_entity_uid":"agv:source:ros:ackermann-multimode-proposal","predicate":"supports_claim","source_locator":"OOXML 段落 16-17、30-51、79-80","to_entity_uid":"agv:claim:ackermann-multimode-design-proposal"}
+{"from_entity_uid":"agv:source:ros:c10b-l150-user-manual","predicate":"supports_claim","source_locator":"PDF 第 7、15、41-45 页","to_entity_uid":"agv:claim:c10b-reference-platform-serial-control"}
+{"from_entity_uid":"agv:source:ros:c10b-mainboard-schematic-2025","predicate":"supports_claim","source_locator":"PDF 第 1-3 页","to_entity_uid":"agv:claim:c10b-mainboard-reference-schematic"}
+{"from_entity_uid":"agv:source:ros:c10b-mcu-app-protocol","predicate":"supports_claim","source_locator":"PDF 第 4-9 页","to_entity_uid":"agv:claim:c10b-mcu-app-reference-protocol"}
+{"from_entity_uid":"agv:source:ros:c10b-resource-map","predicate":"supports_claim","source_locator":"PDF 第 1 页","to_entity_uid":"agv:claim:c10b-resource-allocation-reference"}
 {"from_entity_uid":"agv:source:ros:dyp-a21-datasheet","predicate":"supports_claim","source_locator":"PDF 第 4、6、26-29 页","to_entity_uid":"agv:claim:dyp-a21-can-protocol"}
+{"from_entity_uid":"agv:source:ros:electromagnetic-guidance-principles","predicate":"supports_claim","source_locator":"PDF 第 3-8 页","to_entity_uid":"agv:claim:electromagnetic-guidance-three-channel-reference"}
 {"from_entity_uid":"agv:source:ros:h56-coulomb-protocol","predicate":"supports_claim","source_locator":"第 1-2 节及输入寄存器表（0x00、0x1D、0x1E）","to_entity_uid":"agv:claim:h56-modbus-soc-status-protocol"}
 {"from_entity_uid":"agv:source:ros:huakong-analog-rs485-manual","predicate":"supports_claim","source_locator":"PDF 第 3-5、8 页","to_entity_uid":"agv:claim:huakong-analog-output-protocol"}
 {"from_entity_uid":"agv:source:ros:huakong-digital-io-rs485-manual","predicate":"supports_claim","source_locator":"PDF 第 4-5、9 页","to_entity_uid":"agv:claim:huakong-digital-io-protocol"}
+{"from_entity_uid":"agv:source:ros:legacy-ros-host-autostart","predicate":"supports_claim","source_locator":"UTF-8 全文（网络和路径值已排除）","to_entity_uid":"agv:claim:legacy-autostart-note-security-boundary"}
 {"from_entity_uid":"agv:source:ros:ms16a-modbus-manual","predicate":"supports_claim","source_locator":"PDF 第 4-9 页","to_entity_uid":"agv:claim:ms16a-protocol-and-baud-constraint"}
+{"from_entity_uid":"agv:source:ros:r3mini-ackermann-installation","predicate":"supports_claim","source_locator":"PDF 第 1-2 页装配图","to_entity_uid":"agv:claim:r3mini-ackermann-assembly-reference"}
 {"from_entity_uid":"agv:source:ros:raspberry-pi-project-complete-reading","predicate":"supports_claim","source_locator":"UTF-8 行 68-75、703-709","to_entity_uid":"agv:claim:bringup-historical-entry"}
 {"from_entity_uid":"agv:source:ros:raspberry-pi-project-complete-reading","predicate":"supports_claim","source_locator":"UTF-8 行 213-223、710-713","to_entity_uid":"agv:claim:devices-yaml-not-authoritative"}
 {"from_entity_uid":"agv:source:ros:raspberry-pi-project-complete-reading","predicate":"supports_claim","source_locator":"UTF-8 行 63-75、703-709","to_entity_uid":"agv:claim:renew-primary-integrated-launch"}
@@ -77,4 +94,6 @@
 {"from_entity_uid":"agv:source:ros:ros-driver-board-pinout","predicate":"supports_claim","source_locator":"接口定义图页","to_entity_uid":"agv:claim:ros-driver-board-physical-interface"}
 {"from_entity_uid":"agv:source:ros:stm32-motion-chassis-manual","predicate":"supports_claim","source_locator":"PDF 第 7-8 页","to_entity_uid":"agv:claim:stm32-chassis-serial-framing"}
 {"from_entity_uid":"agv:source:ros:ten-axis-imu-protocol","predicate":"supports_claim","source_locator":"输出数据与配置寄存器章节","to_entity_uid":"agv:claim:ten-axis-imu-output-protocol"}
+{"from_entity_uid":"agv:source:ros:wheeled-chassis-kinematics","predicate":"supports_claim","source_locator":"PDF 第 5-7、24-26 页","to_entity_uid":"agv:claim:ackermann-kinematics-reference-model"}
+{"from_entity_uid":"agv:source:ros:wheeltec-pid-guide","predicate":"supports_claim","source_locator":"PDF 第 16-25 页","to_entity_uid":"agv:claim:wheeltec-pid-control-reference"}
 {"from_entity_uid":"agv:source:ros:yz-aim-rs485-manual","predicate":"supports_claim","source_locator":"运行模式与使能/重启寄存器章节","to_entity_uid":"agv:claim:yz-aim-register-protocol"}

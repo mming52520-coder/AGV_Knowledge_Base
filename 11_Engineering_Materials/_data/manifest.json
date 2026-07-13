@@ -1,6 +1,6 @@
 {
   "accepted_match_count": 38,
-  "claim_count": 25,
+  "claim_count": 34,
   "duplicate_alias_count": 3,
   "excluded_code_trees": [
     "Renew/src",
@@ -9,23 +9,33 @@
     "Renew/sensor2_ws-master"
   ],
   "fingerprints": {
-    "claims.jsonl": "31371ce074d734dc237f4f38ab24c28d598c4304fb38bfdabd9f960df32effda",
-    "matches.jsonl": "66f5cee2f934cd4bfe9d25f4b7fa308c53cecd5d4a9810acc4b15f8c7dbc38a2",
-    "relations.jsonl": "8dab4a8b162606343cbc52f0edcf0fe1cc1096e5bd3df3e0ff7641ff3b2dd306",
-    "sources.jsonl": "ddcaab9a3f1bb9d15245054c3768c52f4b4601b37edd5e46d6fd72abfa248b9f"
+    "claims.jsonl": "546a18d848694982d5bec30310e58a77156d615c6e0ca7ea274a0f405617e0d0",
+    "matches.jsonl": "f927156ff902e49791b97d7112c31ea7e7065b0cb466d0dcdc8a2b13984dac8f",
+    "relations.jsonl": "d2de16a1433196d2d9e316974ed7641637fe0b4de5b9c179e149202db06f1ab5",
+    "ros-source-coverage.json": "eeac306114cc5553ce2b46a8e6724b458baab00d34ab697f5b742a3ff1a11569",
+    "sources.jsonl": "a2d8923791041fc077d1fcace9f58417f9dc6b7215a76b7c2569ab1ba07f3fee"
   },
   "generated": "2026-07-14",
-  "graph_fingerprint": "0edaa00c597802b62619b5491289c366558c5d6980e39b56fe95fa6d44bb23f0",
+  "graph_fingerprint": "72faf76020c5016df88b9665904bcd93e14b50387a64988ec0a8953b02731d9a",
   "graph_id": "agv:material-graph:v1",
-  "match_count": 55,
-  "needs_review_match_count": 13,
-  "relation_count": 80,
+  "match_count": 65,
+  "needs_review_match_count": 22,
+  "relation_count": 99,
+  "ros_coverage": {
+    "all_files_accounted_for": true,
+    "curated_canonical_source_count": 29,
+    "curated_outside_historical_subroot_count": 9,
+    "directory_count": 2678,
+    "file_count": 23256,
+    "inventory_fingerprint": "3711a66754c17b097dc3f8d60ff14d47e68fd0fbcac1df39114edbe928d507ca",
+    "total_bytes": 130169126820
+  },
   "schema_version": "1.0.0",
   "security_boundary": "no credentials, network secrets, executable installers, archives, raw logs, trajectories, or copied attachments",
-  "source_count": 43,
+  "source_count": 52,
   "source_roots": [
     "D:\\推料车项目\\9.车辆学习资料",
     "D:\\ROS工程文件"
   ],
-  "weak_candidate_count": 4
+  "weak_candidate_count": 5
 }

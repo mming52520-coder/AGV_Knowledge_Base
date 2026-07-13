@@ -15,6 +15,7 @@ authority: "B"
 confidentiality: "internal"
 extraction_status: "metadata-only"
 duplicate_aliases: ["D:\\推料车项目\\9.车辆学习资料\\机械设计 (（美）罗伯特·诺顿（Robert L.Norton）著) (z-library.sk, 1lib.sk, z-lib.sk)-1.pdf"]
+content_mirrors_excluded: []
 updated: "2026-07-14"
 tags: ["AGV", "工程资料", "来源节点"]
 ---
@@ -40,6 +41,15 @@ tags: ["AGV", "工程资料", "来源节点"]
 ## 重复别名
 
 - `D:\推料车项目\9.车辆学习资料\机械设计 (（美）罗伯特·诺顿（Robert L.Norton）著) (z-library.sk, 1lib.sk, z-lib.sk)-1.pdf`
+
+## 已排除内容镜像
+
+- 无。
+
+## 模型与实现边界
+
+- 模型范围：项目或通用工程资料。
+- 实现边界：按结论节点的事实状态和适用快照解释，不跨版本外推。
 
 ## 已抽取结论
 
