@@ -1,0 +1,106 @@
+{
+  "edges": [
+    {
+      "fromNode": "learning",
+      "id": "e1",
+      "label": "登记",
+      "toNode": "sources"
+    },
+    {
+      "fromNode": "ros",
+      "id": "e2",
+      "label": "筛选/去重/脱敏",
+      "toNode": "sources"
+    },
+    {
+      "fromNode": "sources",
+      "id": "e3",
+      "label": "定位后抽取",
+      "toNode": "claims"
+    },
+    {
+      "fromNode": "claims",
+      "id": "e4",
+      "label": "评分",
+      "toNode": "matches"
+    },
+    {
+      "fromNode": "matches",
+      "id": "e5",
+      "label": "稳定ID匹配",
+      "toNode": "codev1"
+    },
+    {
+      "fromNode": "rule",
+      "id": "e6",
+      "label": "约束",
+      "toNode": "matches"
+    }
+  ],
+  "nodes": [
+    {
+      "file": "11_Engineering_Materials/Collections/车辆学习资料.md",
+      "height": 220,
+      "id": "learning",
+      "type": "file",
+      "width": 340,
+      "x": -720,
+      "y": -200
+    },
+    {
+      "file": "11_Engineering_Materials/Collections/ROS工程文件.md",
+      "height": 220,
+      "id": "ros",
+      "type": "file",
+      "width": 340,
+      "x": -720,
+      "y": 120
+    },
+    {
+      "file": "11_Engineering_Materials/Sources/_index.md",
+      "height": 220,
+      "id": "sources",
+      "type": "file",
+      "width": 320,
+      "x": -250,
+      "y": -40
+    },
+    {
+      "file": "11_Engineering_Materials/Entities/_index.md",
+      "height": 220,
+      "id": "claims",
+      "type": "file",
+      "width": 320,
+      "x": 210,
+      "y": -40
+    },
+    {
+      "file": "11_Engineering_Materials/Matches/_index.md",
+      "height": 220,
+      "id": "matches",
+      "type": "file",
+      "width": 320,
+      "x": 670,
+      "y": -40
+    },
+    {
+      "file": "00_System/Graph_History/Snapshots/code-v1/V1基线说明.md",
+      "height": 220,
+      "id": "codev1",
+      "type": "file",
+      "width": 340,
+      "x": 1130,
+      "y": -40
+    },
+    {
+      "color": "4",
+      "height": 180,
+      "id": "rule",
+      "text": "匹配概率 ≠ 已实现\n来源、主张、匹配和代码实体保持独立。",
+      "type": "text",
+      "width": 430,
+      "x": 420,
+      "y": 280
+    }
+  ]
+}
