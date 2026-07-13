@@ -1,0 +1,40 @@
+{
+    "snapshot_id":  "code-v1-e8a1b3d",
+    "graph_version":  "v1",
+    "immutable":  true,
+    "created":  "2026-07-14",
+    "vault_commit":  "e8a1b3dee1b67039624da73f1e5a874f4fa61ba1",
+    "vault_tag":  "kg-code-v1-e8a1b3d",
+    "graph_schema_version":  2,
+    "extractor_version":  "codex-v1-export-1",
+    "scope_id":  "agv-code-graph-v1",
+    "source_file_manifest_available":  false,
+    "source_manifest_limitation":  "V1 only retained aggregate source-set hashes; this export is derived from immutable V1 graph pages, not a source rescan.",
+    "tracked_file_count":  126,
+    "markdown_count":  118,
+    "canvas_count":  1,
+    "entity_count":  92,
+    "semantic_relation_count":  208,
+    "entity_type_counts":  {
+                               "algorithm":  4,
+                               "decision":  3,
+                               "hardware":  8,
+                               "index":  2,
+                               "layer":  6,
+                               "report":  1,
+                               "ros_interface":  25,
+                               "ros_node":  23,
+                               "ros_package":  14,
+                               "system":  5,
+                               "vehicle_variant":  1
+                           },
+    "comparison_scope_counts":  {
+                                    "code":  62,
+                                    "context":  24,
+                                    "governance":  6
+                                },
+    "entities_sha256":  "eb6a36ceb8720d080b21bd09d045496cc9aaf9a48b47a33411786ba37cea1152",
+    "relations_sha256":  "bc0a2107f27c872d335b94aa9223343ebd7e42f583f156d8b1fa3f2924ee94eb",
+    "source_sets_sha256":  "049c499f7440410599f6e24e6d6a15c928feb29a11858f6f6bebaadcf82a1b04",
+    "snapshot_fingerprint":  "be5eb78833e5626e11df9a8d60e469a56c05125f44801a6d198708f619f53b8b"
+}

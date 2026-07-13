@@ -1,0 +1,4 @@
+{"source_set":"architecture","label":"code_logic_layers.md","included_files":1,"aggregate_sha256":"6658f565371dd195a0da91fecfba2845abc218b6e08e6a2f25467c0df5bdaf85","source_kind":"document_snapshot"}
+{"source_set":"vehicle-1","label":"一号车源码","included_files":139,"aggregate_sha256":"22214c62e317b1a0d7a813fc47c846afc2c1bc867dd210c36d7e4d8e5195f5b0","source_kind":"filesystem_snapshot"}
+{"source_set":"vehicle-2","label":"二号车源码","included_files":157,"aggregate_sha256":"a811b9132574e869ee98417cb8c5ea26939a976e96272865bbe1b33e4a179781","source_kind":"dirty_git_worktree_snapshot","git_head":"59a915f1b32b9d304ea0db5f3b962e21406030ae"}
+{"source_set":"vehicle-3","label":"三号车源码","included_files":161,"aggregate_sha256":"448336f86dd9debc9362e3262da712fa95c04a986863211d9b865d7bbba09d96","source_kind":"dirty_git_worktree_snapshot","git_head":"59a915f1b32b9d304ea0db5f3b962e21406030ae"}
