@@ -1,0 +1,1325 @@
+{
+  "artifact_sha256": {
+    "V1-to-V2差异摘要.md": "2c4ffd91fc837b5fa5dcadd8226fa0ec6d8c7d973ae6c7c70685d9f8589e7b81",
+    "entities.jsonl": "66c38b91a4f7fb277bf2516bb58deba1bfde64f8a0f01885b871fd7478b4aef0",
+    "extraction-warnings.jsonl": "c17f527188bb03309962d1ac6c46cf9b0c94be25297bda6fc26f4eb2c938c576",
+    "migration-relations.jsonl": "e596adb1940e03e4ffa194f70150c3f9a0e2f709af0dc80aba5ac5d1667fa3f8",
+    "relations.jsonl": "7705d636c7c7181959fce7440463aa0d06ec146d6deac2c96e196e493272abfe",
+    "source-files.jsonl": "ff1bccc68189b26949c0ad44eb3fa8ce4cd3759ac5e89043d878839b792189e8",
+    "v1-to-v2-diff.json": "80228e4a64beb680953a633a8e30077a8c9cf797f4458170a36bd528c5b31ce5"
+  },
+  "baseline_extractor_version": "codex-v1-export-1",
+  "baseline_manifest_limitation": "V1 only retained aggregate source-set hashes; this export is derived from immutable V1 graph pages, not a source rescan.",
+  "baseline_snapshot": "code-v1-e8a1b3d",
+  "baseline_source_context": {
+    "aggregate_hash_reverified": false,
+    "available": true,
+    "git_head_matches_v1_source_set": true,
+    "git_state": {
+      "branch": "main",
+      "changes": [
+        {
+          "path": "4-17-485编程手册.pdf",
+          "status": "??"
+        },
+        {
+          "path": "MQTT_Bridge_传输到另一台电脑工作记忆.md",
+          "status": "??"
+        },
+        {
+          "path": "docs/agv_002_backend_remote_control_update.md",
+          "status": "??"
+        },
+        {
+          "path": "docs/code_logic_layers.jpg",
+          "status": "??"
+        },
+        {
+          "path": "docs/code_logic_layers.md",
+          "status": "??"
+        },
+        {
+          "path": "docs/code_logic_layers.png",
+          "status": "??"
+        },
+        {
+          "path": "docs/code_logic_layers.svg",
+          "status": "??"
+        },
+        {
+          "path": "docs/codex_architecture_memory_workflow.md",
+          "status": "??"
+        },
+        {
+          "path": "src/agv_mqtt_bridge/CMakeLists.txt",
+          "status": " M"
+        },
+        {
+          "path": "src/agv_mqtt_bridge/config/agv_mqtt_bridge.yaml",
+          "status": " M"
+        },
+        {
+          "path": "src/agv_mqtt_bridge/launch/gps_nmea.launch",
+          "status": "??"
+        },
+        {
+          "path": "src/agv_mqtt_bridge/scripts/agv_mqtt_bridge.py",
+          "status": " M"
+        },
+        {
+          "path": "src/agv_mqtt_bridge/scripts/gps_nmea_to_fix_json.py",
+          "status": "??"
+        },
+        {
+          "path": "src/analog_controlled_motor/CMakeLists.txt",
+          "status": " M"
+        },
+        {
+          "path": "src/analog_controlled_motor/src/hk_ao.cpp",
+          "status": " D"
+        },
+        {
+          "path": "src/analog_controlled_motor/src/hk_ao_remote.cpp",
+          "status": " D"
+        },
+        {
+          "path": "src/bringup/launch/all_nodes.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/CMakeLists.txt",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/config/chassis_controller.yaml",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/include/chassis_controller/oid_drive_channel.h",
+          "status": "??"
+        },
+        {
+          "path": "src/chassis_controller/include/chassis_controller/oid_modbus_rtu.h",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/launch/chassis_bridge.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/launch/drive_feedback_odom.launch",
+          "status": "??"
+        },
+        {
+          "path": "src/chassis_controller/launch/motor_controller_test.launch",
+          "status": "??"
+        },
+        {
+          "path": "src/chassis_controller/msg/ChassisState.msg",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/package.xml",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/src/chassis_bridge.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/src/drive_feedback_odom.cpp",
+          "status": "??"
+        },
+        {
+          "path": "src/chassis_controller/src/oid_modbus_rtu.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/test/test_bridge_state_filler.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/chassis_controller/test/test_oid_modbus_rtu.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/magnetic_controlled_motor/CMakeLists.txt",
+          "status": " M"
+        },
+        {
+          "path": "src/magnetic_controlled_motor/launch/magnetic_nodes.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/magnetic_controlled_motor/src/mag_sensor_reader.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/magnetic_controlled_motor/src/motor_control.cpp",
+          "status": " D"
+        },
+        {
+          "path": "src/remote_ctrl/CMakeLists.txt",
+          "status": " M"
+        },
+        {
+          "path": "src/remote_ctrl/launch/remote_ctrl.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/remote_ctrl/launch/steering_motor_only.launch",
+          "status": "??"
+        },
+        {
+          "path": "src/remote_ctrl/launch/steering_only.launch",
+          "status": "??"
+        },
+        {
+          "path": "src/remote_ctrl/package.xml",
+          "status": " M"
+        },
+        {
+          "path": "src/remote_ctrl/src/remote_controller.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/remote_ctrl/test/command_arbitration_test.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/CMakeLists.txt",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/config/hardware.yaml",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/config/mag_landmarks.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/config/mag_navigation.yaml",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/config/vehicle.yaml",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/include/trajectory_recorder/steering_backend.h",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/include/trajectory_recorder/steering_motor.h",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/include/trajectory_recorder/yz_aim_servo.h",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/launch/encoder_probe.launch",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/launch/imu_probe.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/launch/integrated.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/launch/recorder.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/launch/robot_full.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/launch/tracker.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/launch/yz_aim_probe.launch",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/package.xml",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/src/encoder_probe_node.cpp",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/src/imu_probe_node.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/src/steering_motor.cpp",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/src/steering_remote.cpp",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/src/trajectory_recorder.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/src/trajectory_tracker.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/src/trajectory_tracker.cpp.bak_20260506_144529",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/src/yz_aim_probe_node.cpp",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/src/yz_aim_servo.cpp",
+          "status": " M"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/preset_mag_line_8.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260415_172845.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260415_172845_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_100628.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_100628_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_113502.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_113502_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_162532.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_162532_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_162622.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_162622_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_162901.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_162901_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_163104.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_163104_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_163150.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_163150_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_172209.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260416_172209_mag_events.yaml",
+          "status": " D"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_151526.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_151526_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_151828.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_151828_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_154912.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_154912_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_155812.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260525_155812_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_160750.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_160750_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_163121.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_163121_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_164039.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_164039_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165025.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165025_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165232.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165232_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165535.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165535_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165711.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165711_mag_drive.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/trajectory_recorder/yaml/trajectory_20260526_165711_mag_events.yaml",
+          "status": "??"
+        },
+        {
+          "path": "src/ultrasonic_controlled_motor/CMakeLists.txt",
+          "status": " M"
+        },
+        {
+          "path": "src/ultrasonic_controlled_motor/launch/ultrasonic_nodes.launch",
+          "status": " M"
+        },
+        {
+          "path": "src/ultrasonic_controlled_motor/src/motor_control.cpp",
+          "status": " D"
+        },
+        {
+          "path": "伺服电机调试记忆文件.md",
+          "status": "??"
+        },
+        {
+          "path": "前后端mqtt记忆文件/5.11 前后车端对接调试 车端监听.md",
+          "status": "??"
+        },
+        {
+          "path": "前后端mqtt记忆文件/Mqtt测试bridge.md",
+          "status": "??"
+        },
+        {
+          "path": "前后端mqtt记忆文件/imu关闭命令传输.md",
+          "status": "??"
+        },
+        {
+          "path": "前后端mqtt记忆文件/mqtt前后端测试（包含前进，停止，遥控）.md",
+          "status": "??"
+        },
+        {
+          "path": "前后端mqtt记忆文件/mqtt双向传输测试记忆文件命令格式.md",
+          "status": "??"
+        },
+        {
+          "path": "前后端mqtt记忆文件/测试imu mqtt传输.md",
+          "status": "??"
+        },
+        {
+          "path": "前后端mqtt记忆文件/组合命令.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/2026-05-19_单驱电机控制器闭环反馈Linux编译调试记忆.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/2026-05-19_电机控制器闭环反馈接入工作记忆.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/2026-05-25_整车底盘振动与通信失联调试记忆.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/WORK_MEMORY5.08.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/YZAIM_另一台主机直接调试手册.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/codex_work_memory_yz_aim_servo_linux_debug_20260519.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/yz_aim_manual.txt",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/云服务器调配.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/伺服电机调试记忆文件.md",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/调试IMU.txt",
+          "status": "??"
+        },
+        {
+          "path": "工作记忆/调试YZ_AIM.txt",
+          "status": "??"
+        },
+        {
+          "path": "摄像头/SSH调试.md",
+          "status": "??"
+        },
+        {
+          "path": "摄像头/修复录像部署_192.168.10.10.sh",
+          "status": "??"
+        },
+        {
+          "path": "摄像头/摄像头连接激活记忆文件.md",
+          "status": "??"
+        },
+        {
+          "path": "摄像头/最新工作记忆.md",
+          "status": "??"
+        },
+        {
+          "path": "摄像头/最新脚本_systemd服务.service",
+          "status": "??"
+        },
+        {
+          "path": "摄像头/最新脚本_录像主脚本.sh",
+          "status": "??"
+        },
+        {
+          "path": "最新寻迹命令上传后端规则.md",
+          "status": "??"
+        },
+        {
+          "path": "欧艾迪大功率驱动器产品手册V4.0 - .pdf",
+          "status": "??"
+        },
+        {
+          "path": "调试YZ_AIM.txt",
+          "status": "??"
+        }
+      ],
+      "dirty": true,
+      "head": "59a915f1b32b9d304ea0db5f3b962e21406030ae",
+      "repository": true,
+      "status_counts": {
+        " D": 25,
+        " M": 41,
+        "??": 74
+      },
+      "status_sha256": "39784f2756c14b0ff930b4aadc23d9622e938a6921c7bf2664c02a87000bcea3"
+    },
+    "integrity_limitation": "The immutable V1 snapshot retained only an aggregate vehicle-3 source-set hash, not a per-file manifest. Per-file hashes below are contextual hashes of the current-machine V1 source worktree and cannot prove byte identity with the original V1 extraction input.",
+    "source_kind": "contextual_current_machine_v1_source_worktree",
+    "source_locator": "D:/推料车项目/1.各车辆主代码/3.三号车代码/3号车代码/二代车代码",
+    "v1_source_set": {
+      "aggregate_sha256": "448336f86dd9debc9362e3262da712fa95c04a986863211d9b865d7bbba09d96",
+      "git_head": "59a915f1b32b9d304ea0db5f3b962e21406030ae",
+      "included_files": 161,
+      "label": "三号车源码",
+      "source_kind": "dirty_git_worktree_snapshot",
+      "source_set": "vehicle-3"
+    }
+  },
+  "baseline_source_context_fingerprint": "e7887814e44f32fab58c1737b87c6e768d5af1825161a83321e03f4542fafd1c",
+  "baseline_tree_sha256": "f4c10ef4f0c6c5e4dbe9f66a5744ea95f94822be431f552ffe04a400444b09c8",
+  "comparison_limitations": [
+    {
+      "detail": "Entity unchanged compares only declared graph semantic fields (identity/status/ROS name/executable/interface kind/message type/version/vehicles). It does not prove unchanged implementation or configuration source; V1 has no per-file manifest and its hashes are graph-page provenance.",
+      "limitation_id": "unchanged-graph-semantics-not-source-code"
+    },
+    {
+      "detail": "V1 relations use codex-v1-export-1 while V2 uses codex-v2-staging-1; relation deltas can reflect extractor coverage/schema drift as well as architecture changes.",
+      "limitation_id": "cross-extractor-relation-drift"
+    }
+  ],
+  "context_source_file_count": 6,
+  "created": "2026-07-14",
+  "entity_count": 192,
+  "entity_type_counts": {
+    "ros_interface": 128,
+    "ros_node": 39,
+    "ros_package": 25
+  },
+  "excluded_source_file_count": 3606,
+  "extraction_limitations": [
+    {
+      "detail": "Launch extraction reads explicit node/group namespaces only; it does not expand include, arg/substitution, if/unless conditions, or remap semantics.",
+      "limitation_id": "launch-static-xml-only"
+    },
+    {
+      "detail": "Endpoint extraction covers direct ROS C++/Python calls, templated C++ subscribe, and static Python _subscribe(_param_topic(...)) defaults; arbitrary macros, runtime-computed names, and dynamic loops remain unresolved.",
+      "limitation_id": "endpoint-static-syntax-only"
+    },
+    {
+      "detail": "V1 has no per-file source manifest and uses a curated graph, so V1-only relations are extraction_limited candidates rather than definitive runtime removals.",
+      "limitation_id": "relation-removal-not-definitive"
+    },
+    {
+      "detail": "The snapshot records source locators and relative evidence paths; publish only to a private repository or sanitize paths before wider disclosure.",
+      "limitation_id": "private-path-disclosure"
+    }
+  ],
+  "extractor_version": "codex-v2-staging-1",
+  "git_state": {
+    "branch": "main",
+    "changes": [
+      {
+        "path": "deploy/udev/99-agv-serial.rules.template",
+        "status": "??"
+      },
+      {
+        "path": "deploy/udev/README.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_ALGORITHM_PARITY.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_CURRENT_ARCHITECTURE_AUDIT.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_DECISION_TRAJECTORY_MIGRATION.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_HARDWARE_ENABLE_CHECKLIST.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_LAYERED_ARCHITECTURE.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_MIGRATION_BASELINE.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_MIGRATION_MAP.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_MOCK_EXECUTION_GUIDE.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_MOCK_TEST_GUIDE.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_ODOM_OWNERSHIP.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_PERCEPTION_CONTRACT.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_SAFETY_CONTRACT.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_TOPIC_CONTRACT.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/AGV_TOPIC_PORT_MATRIX.md",
+        "status": "??"
+      },
+      {
+        "path": "docs/code_logic_layers.md",
+        "status": " M"
+      },
+      {
+        "path": "docs/code_logic_layers.svg",
+        "status": " M"
+      },
+      {
+        "path": "scripts/audit_agv_architecture.sh",
+        "status": "??"
+      },
+      {
+        "path": "scripts/collect_agv_serial_identity.sh",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_bringup/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_bringup/launch/execution_mock_test.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_bringup/launch/perception_diagnostics.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_bringup/launch/simulation.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_bringup/launch/vehicle.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_bringup/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/config/trajectory_decision.yaml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/left_wall_controller.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/mag_guidance_controller.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/motion_intent_builder.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/obstacle_policy.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/replay_types.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/teleop_intent_adapter.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/tight_turn_controller.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/trajectory_controller.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/trajectory_cursor.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/include/agv_decision/trajectory_loader.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/launch/decision_all_mock.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/launch/trajectory_chain_mock.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/left_wall_controller.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/left_wall_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/mag_guidance_controller.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/mag_guidance_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/motion_intent_builder.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/teleop_intent_adapter.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/teleop_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/tight_turn_controller.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/tight_turn_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/trajectory_controller.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/trajectory_cursor.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/trajectory_follower_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/src/trajectory_loader.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/test/test_strategy_controllers.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_decision/test/test_trajectory_decision.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/include/agv_execution/command_mapping.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/include/agv_execution/mock_execution_backend.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/launch/execution_mock_test.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/src/chassis_gateway_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/src/mock_execution_backend.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/test/test_command_mapping.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_execution/test/test_mock_execution_backend.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/msg/ExecutionState.msg",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/msg/MissionState.msg",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/msg/MotionCommand.msg",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/msg/MotionIntent.msg",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/msg/PerceptionState.msg",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/msg/SafetyState.msg",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/msg/VehicleState.msg",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/srv/CancelMission.srv",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/srv/PauseMission.srv",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/srv/ResetSafetyFault.srv",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/srv/ResumeMission.srv",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_interfaces/srv/StartMission.srv",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_legacy/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_legacy/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_legacy/src/legacy_command_adapter.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_legacy/src/legacy_sensor_adapter.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_mission/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_mission/include/agv_mission/mission_manager.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_mission/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_mission/src/mission_manager.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_mission/src/mission_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_mission/test/test_mission_manager.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/config/perception.yaml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/include/agv_perception/perception_aggregator.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/launch/perception.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/src/perception_aggregator.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/src/perception_aggregator_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_perception/test/test_perception_aggregator.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/config/safety_policy.yaml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/include/agv_safety/motion_arbiter.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/include/agv_safety/obstacle_guard.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/include/agv_safety/safety_supervisor.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/src/motion_arbiter.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/src/motion_arbiter_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/src/safety_supervisor.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/src/safety_supervisor_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/test/test_motion_arbiter.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/test/test_obstacle_guard.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_safety/test/test_safety_supervisor.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/include/agv_state_estimation/ekf_localizer.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/include/agv_state_estimation/vehicle_state_estimator.h",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/launch/state_estimation_mock.launch",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/src/ekf_localizer.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/src/vehicle_state_estimator.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/src/vehicle_state_estimator_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/test/test_ekf_localizer.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_state_estimation/test/test_vehicle_state_estimator.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_telemetry/CMakeLists.txt",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_telemetry/package.xml",
+        "status": "??"
+      },
+      {
+        "path": "src/agv_telemetry/src/telemetry_node.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/bringup/launch/all_nodes.launch",
+        "status": " M"
+      },
+      {
+        "path": "src/chassis_controller/config/chassis_controller.yaml",
+        "status": " M"
+      },
+      {
+        "path": "src/chassis_controller/src/chassis_bridge.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/CMakeLists.txt",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/config/dyp_ultrasonic.yaml",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/include/dyp_ultrasonic_driver/modbus_rtu.h",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/launch/dyp_ultrasonic.launch",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/package.xml",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/src/dyp_ultrasonic_node.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/src/modbus_rtu.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/dyp_ultrasonic_driver/test/test_modbus_rtu.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/magnetic_controlled_motor/launch/magnetic_nodes.launch",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/CMakeLists.txt",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/config/hardware.yaml",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/config/ultrasonic_behavior.yaml",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/config/vehicle.yaml",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/include/trajectory_recorder/encoder.h",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/include/trajectory_recorder/ft_epc_encoder_protocol.h",
+        "status": "??"
+      },
+      {
+        "path": "src/trajectory_recorder/include/trajectory_recorder/odometry_engine.h",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/include/trajectory_recorder/yz_aim_servo.h",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/launch/integrated.launch",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/launch/robot_full.launch",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/launch/tracker.launch",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/src/encoder.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/src/ft_epc_encoder_protocol.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/trajectory_recorder/src/odometry_engine.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/src/trajectory_recorder.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/src/trajectory_tracker.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/src/yz_aim_servo.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/test/test_ekf_fusion.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/trajectory_recorder/test/test_ft_epc_encoder_protocol.cpp",
+        "status": "??"
+      },
+      {
+        "path": "src/trajectory_recorder/test/test_odometry_engine.cpp",
+        "status": " M"
+      },
+      {
+        "path": "src/ultrasonic_controlled_motor/launch/ultrasonic_nodes.launch",
+        "status": " M"
+      },
+      {
+        "path": "操作记忆_20260605_131346_linux_另一台设备下载代码.md",
+        "status": "??"
+      }
+    ],
+    "dirty": true,
+    "head": "aef23b8cc796ab791bae0c8f7516c195c359c846",
+    "repository": true,
+    "status_counts": {
+      " M": 31,
+      "??": 126
+    },
+    "status_sha256": "09281d9a2aeaf6b738ec2e73244c7e6140c8315d823d172def153c677e10a015"
+  },
+  "graph_schema_version": 2,
+  "graph_version": "v2",
+  "immutable": true,
+  "included_source_file_count": 319,
+  "interface_kind_counts": {
+    "message_type": 14,
+    "service": 30,
+    "service_type": 15,
+    "topic": 69
+  },
+  "migration_relation_count": 50,
+  "risk_count": 16,
+  "risk_counts": {
+    "by_kind": {
+      "breaking": 7,
+      "deployment_change": 2,
+      "integration_gap": 2,
+      "parity_gap": 1,
+      "release_risk": 1,
+      "safe_default_change": 1,
+      "scope_contraction": 1,
+      "validation_blocker": 1
+    },
+    "by_severity": {
+      "critical": 1,
+      "high": 9,
+      "medium": 6
+    }
+  },
+  "risk_evidence_required": true,
+  "scope_id": "agv-code-graph-v2-vehicle-3-latest",
+  "semantic_relation_count": 496,
+  "snapshot_fingerprint": "c86d52c42ac33ef3c6a5e0c65cee6eb7e9745fae21fd62ac5cdd92751c49d147",
+  "snapshot_id": "code-v2-aef23b8c-wt-03fcd3118087",
+  "source_file_count": 3931,
+  "source_file_manifest_available": true,
+  "source_fingerprint": "03fcd31180875699d27d72a28fc52de5d812eb8b6ea1663663039ade901a2122",
+  "source_kind": "current_filesystem_git_worktree_snapshot",
+  "source_locator": "D:/推料车项目/1.各车辆主代码/3.num3 improve/num3",
+  "warning_count": 1
+}

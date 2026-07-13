@@ -1,0 +1,466 @@
+{
+  "edges": [
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "1c2316b2b41eab78",
+      "label": "新增分层",
+      "toNode": "f46fb4b3a11bde2c",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "1c2316b2b41eab78",
+      "label": "新增分层",
+      "toNode": "ee16693ef737779f",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "1c2316b2b41eab78",
+      "label": "新增分层",
+      "toNode": "cae39ff82f046b54",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "1c2316b2b41eab78",
+      "label": "新增分层",
+      "toNode": "b9415fb45ba543c7",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "1c2316b2b41eab78",
+      "label": "新增分层",
+      "toNode": "5e916ad3c68c9e67",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "1c2316b2b41eab78",
+      "label": "新增分层",
+      "toNode": "bad35c1a5c2bcd89",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "89423dfd3006b49f",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "7f3a74178f73fa50",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "04d0252ab769934f",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "cfcdc80597627f24",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "4acc47309bfc88cc",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "475c91fc12015491",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "63d2de2925be5f7e",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "f7584d0f2df86157",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "320772e690708bfb",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "c5ce74b113f503fc",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "f36640a2c69cbd85",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "0011b5ce2f4883a1",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "9b372773e8ea4350",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "e5bc09e980d5cae1",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "71ff27c4205ee67f",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "3130bbcc0b793a63",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "f2e624aec4211d03",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "b74522c9553c4d92",
+      "toSide": "top"
+    },
+    {
+      "fromNode": "cf2313b62643c004",
+      "fromSide": "bottom",
+      "id": "932d8de5c52c92a5",
+      "label": "迁移/分解",
+      "toNode": "07f744e25009521c",
+      "toSide": "top"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "3",
+      "height": 170,
+      "id": "0011b5ce2f4883a1",
+      "text": "## [[03_ROS/Nodes/encoder_probe|encoder_probe]]\n\n- `removed_diagnostic` → **V2 无替代实例**",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 2960
+    },
+    {
+      "color": "3",
+      "height": 173,
+      "id": "04d0252ab769934f",
+      "text": "## [[03_ROS/Interfaces/hardware-probe-topics|/imu/probe_* + /encoder_probe/* + ~yz_aim_probe/*]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/imu-probe_data--dd6a95a4889e|/imu/probe_data]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/imu-probe_rpy_deg--fb8aa34c79ce|/imu/probe_rpy_deg]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 483
+    },
+    {
+      "color": "3",
+      "height": 173,
+      "id": "07f744e25009521c",
+      "text": "## [[03_ROS/Packages/agv_mqtt_bridge|agv_mqtt_bridge]]\n\n- `capability_extracted_to` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_mission--2b7d8642ed63|agv_mission]]\n- `capability_extracted_to` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_telemetry--948609af5cdf|agv_telemetry]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 4710
+    },
+    {
+      "color": "3",
+      "height": 377,
+      "id": "3130bbcc0b793a63",
+      "text": "## [[03_ROS/Nodes/trajectory_tracker|trajectory_tracker]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/chassis_gateway_node--e753a2e58776|chassis_gateway_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/left_wall_node--fdb9bf57d711|left_wall_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/mag_guidance_node--57ab4596f322|mag_guidance_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/motion_arbiter_node--7dadfc6c36d0|motion_arbiter_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/safety_supervisor_node--c235eb005bf0|safety_supervisor_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/tight_turn_node--fafce7d62191|tight_turn_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/trajectory_follower_node--983183f9b80a|trajectory_follower_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/vehicle_state_estimator_node--f5bf32466a46|vehicle_state_estimator_node]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 3840
+    },
+    {
+      "color": "3",
+      "height": 241,
+      "id": "320772e690708bfb",
+      "text": "## [[03_ROS/Interfaces/ultrasonic-status|/ultrasonic/*_status]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-front_status--9cf5e5dd81ab|/ultrasonic/front_status]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-left_status--076d80f3e514|/ultrasonic/left_status]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-rear_status--4db4f184e714|/ultrasonic/rear_status]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-right_status--1b88b10d7f8c|/ultrasonic/right_status]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 2226
+    },
+    {
+      "color": "3",
+      "height": 173,
+      "id": "475c91fc12015491",
+      "text": "## [[03_ROS/Interfaces/relay-io-status|hk_dio/input_status + hk_dio/relay_status]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/hk_dio-input_status--72ab874ae88a|/hk_dio/input_status]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/hk_dio-relay_status--d0b9d229a1b0|/hk_dio/relay_status]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 1149
+    },
+    {
+      "color": "3",
+      "height": 170,
+      "id": "4acc47309bfc88cc",
+      "text": "## [[03_ROS/Interfaces/odom|/odom]]\n\n- `owner_changed` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/odom--1e74762c157b|/odom]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 929
+    },
+    {
+      "color": "5",
+      "height": 160,
+      "id": "5e916ad3c68c9e67",
+      "text": "## 执行网关层\n\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_execution--855e548bdcfd|agv_execution]]",
+      "type": "text",
+      "width": 560,
+      "x": 920,
+      "y": 896
+    },
+    {
+      "color": "3",
+      "height": 479,
+      "id": "63d2de2925be5f7e",
+      "text": "## [[03_ROS/Interfaces/trajectory-services|/trajectory/* + /imu/* + /steering/*]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/imu-reset_calibration--92101a8c204c|/imu/reset_calibration]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/imu-set_forward--a8b86ae4edbd|/imu/set_forward]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/imu-set_zero--cafbe217e891|/imu/set_zero]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/steering-save_params--9cb80ef2e02d|/steering/save_params]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/steering-set_origin--cb8c38d86987|/steering/set_origin]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/trajectory-pause--1d26c34d770a|/trajectory/pause]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/trajectory-play--bb449507544e|/trajectory/play]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/trajectory-save--b7dbb55b5e17|/trajectory/save]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/trajectory-start_record--d1ef1c28d4da|/trajectory/start_record]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/trajectory-stop--477f96acba29|/trajectory/stop]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/trajectory-stop_record--2819b569b2db|/trajectory/stop_record]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 1372
+    },
+    {
+      "color": "3",
+      "height": 170,
+      "id": "71ff27c4205ee67f",
+      "text": "## [[03_ROS/Nodes/remote_controller|remote_controller]]\n\n- `parallel_replacement` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/teleop_node--46ce150fbd13|teleop_node]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 3620
+    },
+    {
+      "color": "3",
+      "height": 173,
+      "id": "7f3a74178f73fa50",
+      "text": "## [[03_ROS/Interfaces/encoder-state|/encoder_angle + encoder_twist]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/encoder_angle--bca3ba1cc686|/encoder_angle]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/encoder_twist--e5de60543d8b|/encoder_twist]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 260
+    },
+    {
+      "color": "3",
+      "height": 170,
+      "id": "89423dfd3006b49f",
+      "text": "## [[03_ROS/Interfaces/chassis-cmd|/chassis/cmd]]\n\n- `publisher_changed` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/chassis-cmd--f60fe5d4d5a2|/chassis/cmd]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 40
+    },
+    {
+      "color": "3",
+      "height": 170,
+      "id": "9b372773e8ea4350",
+      "text": "## [[03_ROS/Nodes/gps_nmea_to_fix_json|gps_nmea_to_fix_json]]\n\n- `removed_without_replacement` → **V2 无替代实例**",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 3180
+    },
+    {
+      "color": "3",
+      "height": 170,
+      "id": "b74522c9553c4d92",
+      "text": "## [[03_ROS/Nodes/yz_aim_probe|yz_aim_probe]]\n\n- `removed_diagnostic` → **V2 无替代实例**",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 4490
+    },
+    {
+      "color": "5",
+      "height": 160,
+      "id": "b9415fb45ba543c7",
+      "text": "## 安全与仲裁层\n\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_safety--2cb0a140ec4e|agv_safety]]",
+      "type": "text",
+      "width": 560,
+      "x": 920,
+      "y": 686
+    },
+    {
+      "color": "5",
+      "height": 236,
+      "id": "bad35c1a5c2bcd89",
+      "text": "## 集成、兼容与驱动层\n\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_bringup--4378167611a3|agv_bringup]]\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_legacy--db70b74c409e|agv_legacy]]\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_telemetry--948609af5cdf|agv_telemetry]]\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/dyp_ultrasonic_driver--32fa83ff01e7|dyp_ultrasonic_driver]]",
+      "type": "text",
+      "width": 560,
+      "x": 920,
+      "y": 1106
+    },
+    {
+      "color": "3",
+      "height": 173,
+      "id": "c5ce74b113f503fc",
+      "text": "## [[03_ROS/Nodes/agv_mqtt_bridge|agv_mqtt_bridge]]\n\n- `capability_extracted_to` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/mission_node--3f300b35dfe3|mission_node]]\n- `capability_extracted_to` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/telemetry_node--8a7add193f0d|telemetry_node]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 2517
+    },
+    {
+      "color": "5",
+      "height": 168,
+      "id": "cae39ff82f046b54",
+      "text": "## 任务与决策层\n\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_decision--b986d1212fd1|agv_decision]]\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_mission--2b7d8642ed63|agv_mission]]",
+      "type": "text",
+      "width": 560,
+      "x": 920,
+      "y": 468
+    },
+    {
+      "color": "4",
+      "height": 220,
+      "id": "cf2313b62643c004",
+      "text": "# V1 → V2 架构演化\n\n`code-v1-e8a1b3d` → `code-v2-aef23b8c-wt-03fcd3118087`\n\n左侧：显式分解/替换\n右侧：新增分层 Package",
+      "type": "text",
+      "width": 520,
+      "x": 520,
+      "y": -320
+    },
+    {
+      "color": "3",
+      "height": 173,
+      "id": "cfcdc80597627f24",
+      "text": "## [[03_ROS/Interfaces/motor-services|/motor_init + /motor_enable]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/motor_enable--b1448e6b3664|/motor_enable]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/motor_init--080a587cd9d9|/motor_init]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 706
+    },
+    {
+      "color": "3",
+      "height": 170,
+      "id": "e5bc09e980d5cae1",
+      "text": "## [[03_ROS/Nodes/magnetic_follower|magnetic_follower]]\n\n- `parallel_replacement` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/mag_guidance_node--57ab4596f322|mag_guidance_node]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 3400
+    },
+    {
+      "color": "5",
+      "height": 168,
+      "id": "ee16693ef737779f",
+      "text": "## 感知与状态估计层\n\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_perception--b3844e0c0c3f|agv_perception]]\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_state_estimation--99b849143b75|agv_state_estimation]]",
+      "type": "text",
+      "width": 560,
+      "x": 920,
+      "y": 250
+    },
+    {
+      "color": "3",
+      "height": 173,
+      "id": "f2e624aec4211d03",
+      "text": "## [[03_ROS/Nodes/ultrasonic_follower|ultrasonic_follower]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/left_wall_node--fdb9bf57d711|left_wall_node]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/safety_supervisor_node--c235eb005bf0|safety_supervisor_node]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 4267
+    },
+    {
+      "color": "3",
+      "height": 170,
+      "id": "f36640a2c69cbd85",
+      "text": "## [[03_ROS/Nodes/drive_feedback_odom|drive_feedback_odom]]\n\n- `superseded_by` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/vehicle_state_estimator_node--f5bf32466a46|vehicle_state_estimator_node]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 2740
+    },
+    {
+      "color": "5",
+      "height": 160,
+      "id": "f46fb4b3a11bde2c",
+      "text": "## 接口契约层\n\n- [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Packages/agv_interfaces--7060d62ebf45|agv_interfaces]]",
+      "type": "text",
+      "width": 560,
+      "x": 920,
+      "y": 40
+    },
+    {
+      "color": "3",
+      "height": 275,
+      "id": "f7584d0f2df86157",
+      "text": "## [[03_ROS/Interfaces/ultrasonic-distance|/ultrasonic/*_distance]]\n\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-front_distance--f2df0d6f13fc|/ultrasonic/front_distance]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-left_avg_distance--6dc5944f4576|/ultrasonic/left_avg_distance]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-left_distance--1240d1cca41f|/ultrasonic/left_distance]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-rear_distance--875cdec8b4fb|/ultrasonic/rear_distance]]\n- `decomposed_into` → [[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Interfaces/ultrasonic-right_distance--ce2626276c17|/ultrasonic/right_distance]]",
+      "type": "text",
+      "width": 650,
+      "x": 0,
+      "y": 1901
+    }
+  ]
+}

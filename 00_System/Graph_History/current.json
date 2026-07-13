@@ -1,6 +1,13 @@
 {
+  "candidate_review": "generated",
+  "candidate_snapshot": "code-v2-aef23b8c-wt-03fcd3118087",
+  "candidate_snapshot_path": "00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087",
+  "candidate_status": "candidate_pending_review",
+  "comparison_path": "00_System/Graph_History/Changes/code-v1-e8a1b3d__code-v2-aef23b8c-wt-03fcd3118087",
   "current_snapshot": "code-v1-e8a1b3d",
-  "snapshot_path": "00_System/Graph_History/Snapshots/code-v1",
+  "current_status": "active",
+  "recommendation_status": "candidate_pending_review",
   "review": "verified",
+  "snapshot_path": "00_System/Graph_History/Snapshots/code-v1",
   "updated": "2026-07-14"
 }

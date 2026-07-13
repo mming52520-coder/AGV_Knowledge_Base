@@ -28,6 +28,15 @@ This repository is the engineering knowledge base for mobile robot R&D. Windows 
 - Do not commit `.obsidian/plugins`, plugin `data.json`, workspace state, secrets, ROS bags, logs, or build outputs.
 - Put large attachments under review before adding them to Git; use Git LFS only after explicit approval.
 
+## Knowledge graph evolution
+
+- Treat `00_System/Graph_History/Snapshots/*` as immutable version evidence. Generate a new snapshot and a separate `Changes/<baseline>__<target>` comparison; never overwrite an older snapshot.
+- Keep `03_ROS` as the stable logical-entity layer. Version-instance pages under a snapshot are generated views and must not silently replace those logical pages.
+- Preserve stable `entity_uid` values only when strong keys match. Record decomposition, replacement, removal and ownership changes explicitly; do not infer a rename from name similarity alone.
+- Engineering-material matches must keep `match_probability` separate from `implementation_evidence`. Proposals, textbooks and different vehicle models are reference evidence, not proof that current code implements a feature.
+- A snapshot from a dirty or untracked code worktree remains a review candidate even when its extraction is validated. Promote the current pointer only after the source state is reproducible and the diff has been reviewed.
+- Run the graph generators and their validators before staging. Report unresolved links, extraction limitations, risk records and source-state drift.
+
 ## Git rules
 
 - One logical change per commit.

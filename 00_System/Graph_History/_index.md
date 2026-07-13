@@ -1,21 +1,25 @@
 ---
 id: "agv:index:graph-history"
-type: index
-status: active
-review: verified
-project: AGV
-updated: 2026-07-14
-tags: [AGV, 代码图谱, 快照, 差异]
+type: "index"
+status: "active"
+review: "verified"
+candidate_status: "candidate_pending_review"
+candidate_review: "generated"
+project: "AGV"
+updated: "2026-07-14"
+tags: ["AGV", "代码图谱", "快照", "差异"]
 ---
 
 # 代码图谱版本与差异
 
-## 当前状态
+## 当前指针
 
-- 当前推荐快照：`code-v1`
-- V1 Git 提交：`e8a1b3d`
-- V1 Git 标签：`kg-code-v1-e8a1b3d`
-- V1 原页面：保持不可变
+- 当前推荐：[[00_System/Graph_History/Snapshots/code-v1/V1基线说明|code-v1-e8a1b3d]]
+- 待复核候选：[[00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/V2快照说明|code-v2-aef23b8c-wt-03fcd3118087]]
+- 对比：[[00_System/Graph_History/Changes/code-v1-e8a1b3d__code-v2-aef23b8c-wt-03fcd3118087/_index|V1 → V2 差异总览]]
+- 指针说明：[[00_System/Graph_History/当前推荐快照|当前推荐快照]]
+
+V1 保持不可变；V2 使用独立快照实例页，不覆盖现有 `03_ROS` 页面。
 
 ## 快照
 
