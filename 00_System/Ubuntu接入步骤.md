@@ -16,7 +16,7 @@ tags:
 
 ```bash
 cd ~
-git clone <PRIVATE_REMOTE_URL> AGV_Knowledge_Base
+git clone https://github.com/mming52520-coder/AGV_Knowledge_Base.git AGV_Knowledge_Base
 cd ~/AGV_Knowledge_Base
 git status
 ```
