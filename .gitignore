@@ -1,0 +1,36 @@
+# Obsidian machine-local state
+.obsidian/workspace*.json
+.obsidian/cache/
+.obsidian/sync.json
+.obsidian/plugins/
+.trash/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary and editor files
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Robot-development generated data
+*.bag
+*.bag.active
+log/
+logs/
+build/
+devel/
+install/
