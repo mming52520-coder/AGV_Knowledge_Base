@@ -1,6 +1,6 @@
 # AGV Knowledge Base
 
-奶牛场移动机器人研发知识库，采用 **Windows Obsidian 主编辑 + Git 私有仓库同步 + Ubuntu Codex/ROS 工程协作** 的工作方式。
+智能机器人研发知识库，采用 **Windows Obsidian 主编辑 + Git 私有仓库同步 + Ubuntu Codex/ROS 工程协作** 的工作方式。
 
 ## 环境分工
 
