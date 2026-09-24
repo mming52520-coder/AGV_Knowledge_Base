@@ -1,6 +1,6 @@
 # 机器检索入口
 
-本目录提供同一知识库的机器视图。Markdown 正文仍是人类维护的权威说明；config.json 只补充少量别名、类型化关系和证据入口，index.json 由工具确定性生成。现有图谱快照、资料清单和 current 指针保持原状。
+本目录提供同一知识库的机器视图。Markdown 正文仍是人类维护的权威说明；config.json 只补充少量别名、类型化关系和证据入口。`manifest.json`、`documents.jsonl`、`relations.jsonl` 由工具确定性生成，逐行记录便于审查增量 diff；旧 `index.json` 已废弃，不与新格式并存。现有图谱快照、资料清单和 current 指针保持原状。
 
 ## 调用
 
@@ -14,9 +14,11 @@ python3 00_System/AI_Index/kb_index.py query "left_wall_node" --snapshot code-v2
 python3 00_System/AI_Index/kb_index.py query "超声" --project AGV --vehicle 三号车 --limit 10
 ~~~
 
-query 返回有限个候选，不替用户选定同名实体。默认结果不把 V2 候选或历史差异页当成当前事实；显式提供快照或 --include-candidate 才展开。没有结果时输出空列表。查询前会重算输入哈希并运行 check；正文、证据、关系配置或保护路径变化后，旧索引会报过期，必须重新 build 并复核。
+query 返回有限个候选，不替用户选定同名实体。默认结果不包含 V2 候选或历史差异页；显式提供快照或 `--include-candidate` 才展开候选，`--include-history` 才展开历史页。即使精确输入候选或历史文档 id，默认查询也不会放行。没有结果时输出空列表。查询前会重算输入哈希并运行 check，随后读取已校验的磁盘索引；正文、证据、关系配置或保护路径变化后，旧索引会报过期，必须重新 build 并复核。
 
-每条结果包含文档 id、正文路径、类型、项目/车型/范围、快照、审查状态、正文 SHA-256、别名、摘要、证据定位及证据 SHA-256。没有资料支持的字段为 null 或空列表，不会补造版本、测试结果或实车状态。文档身份与逻辑实体 UID、快照实例键分开；同一逻辑 UID 在不同快照出现是合法的。文件重命名后只要保留 frontmatter id，重建索引即可更新路径；身份不明的迁移仍需人工复核。
+每条结果包含文档 id、正文路径、类型、项目/车型/范围、快照、分类、审查状态、正文 SHA-256、别名、摘要、证据定位及证据 SHA-256。分类中的 `logical_reference` 表示 `03_ROS` 稳定逻辑页，不是当前源码实现证据；`current_snapshot` 表示当前指针所指快照中的页面，是否为实体实例还须看 `type` 与实例键。`candidate`、`historical`、`document` 分别表示候选快照、历史记录和其他文档。没有资料支持的字段为 null 或空列表，不会补造版本、测试结果或实车状态。文档身份与逻辑实体 UID、快照实例键分开；同一逻辑 UID 在不同快照出现是合法的。文件重命名后只要保留 frontmatter id，重建索引即可更新路径；身份不明的迁移仍需人工复核。
+
+`manifest.json` 记录 schema、指针、条数及两个 JSONL 文件的 SHA-256；文档按 id、关系按端点与关系名稳定排序。check 对这三个实际文件逐字节比对，重复 build 在输入相同的情况下应保持字节一致。该索引仅用于检索，不能替代原始页面和证据。
 
 check 核对 419 个基线受保护文件组成的树指纹及两个既有标签，包括历史 Snapshots、Changes、冻结 Tools 及 current.json；验证文档身份、实例键、登记关系和关键阅读页的 Wiki 链接。链接检查支持显示别名、相对/根路径、Markdown 与 Canvas 目标、单段标题和 #^块锚点，并跳过围栏代码块；不解析多级标题链、Markdown 格式链接或内联代码中的示例。全库既有链接不在本轮强制范围，含动态查询及复杂嵌入的 Obsidian 视觉表现仍需人工核对。保护指纹取自基线提交 a072378b54583aa12bcd383eb36489863e88c861。
 

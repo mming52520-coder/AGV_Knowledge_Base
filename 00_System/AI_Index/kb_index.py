@@ -15,6 +15,7 @@ import sys
 
 SCHEMA_VERSION = 1
 TOOL_VERSION = "1.0"
+INDEX_FILES = ("manifest.json", "documents.jsonl", "relations.jsonl")
 PROTECTED = (
     "00_System/Graph_History/Snapshots/",
     "00_System/Graph_History/Changes/",
@@ -152,12 +153,14 @@ def classify(doc: dict, pointer: dict) -> str:
     snapshot = doc["snapshot"]
     if doc["type"] == "graph_change" or "/Changes/" in doc["path"]:
         return "historical"
-    if snapshot == pointer.get("candidate_snapshot"):
-        return "candidate"
-    if doc["type"] == "graph_entity_instance" and snapshot != pointer.get("current_snapshot"):
+    if doc["path"].startswith("03_ROS/"):
+        return "logical_reference"
+    if doc["type"] == "graph_entity_instance" or doc["path"].startswith("00_System/Graph_History/Snapshots/"):
+        if snapshot == pointer.get("current_snapshot"):
+            return "current_snapshot"
+        if snapshot == pointer.get("candidate_snapshot"):
+            return "candidate"
         return "historical"
-    if snapshot == pointer.get("current_snapshot") or doc["path"].startswith("03_ROS/"):
-        return "current_reference"
     return "document"
 
 
@@ -248,6 +251,49 @@ def build_model(vault: Path, config_path: Path) -> dict:
     }
 
 
+def index_bytes(model: dict) -> dict[str, bytes]:
+    documents = b"".join(canonical(doc) for doc in model["documents"])
+    relations = b"".join(canonical(relation) for relation in model["relations"])
+    manifest = {
+        "schema_version": model["schema_version"],
+        "tool_version": model["tool_version"],
+        "current_snapshot": model["current_snapshot"],
+        "candidate_snapshot": model["candidate_snapshot"],
+        "document_count": len(model["documents"]),
+        "relation_count": len(model["relations"]),
+        "documents_sha256": digest(documents),
+        "relations_sha256": digest(relations),
+    }
+    return {
+        "manifest.json": (json.dumps(manifest, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode("utf-8"),
+        "documents.jsonl": documents,
+        "relations.jsonl": relations,
+    }
+
+
+def write_index(index_dir: Path, model: dict) -> None:
+    index_dir.mkdir(parents=True, exist_ok=True)
+    for name, data in index_bytes(model).items():
+        target = index_dir / name
+        temporary = target.with_name(target.name + ".tmp")
+        temporary.write_bytes(data)
+        os.replace(temporary, target)
+
+
+def read_index(index_dir: Path) -> dict:
+    manifest = json.loads((index_dir / "manifest.json").read_text(encoding="utf-8"))
+    documents = [json.loads(line) for line in (index_dir / "documents.jsonl").read_text(encoding="utf-8").splitlines()]
+    relations = [json.loads(line) for line in (index_dir / "relations.jsonl").read_text(encoding="utf-8").splitlines()]
+    return {
+        "schema_version": manifest["schema_version"],
+        "tool_version": manifest["tool_version"],
+        "current_snapshot": manifest["current_snapshot"],
+        "candidate_snapshot": manifest["candidate_snapshot"],
+        "documents": documents,
+        "relations": relations,
+    }
+
+
 def protected_digest(vault: Path) -> str:
     result = subprocess.check_output(["git", "-C", str(vault), "ls-files", "-z"])
     paths = sorted(path.decode("utf-8") for path in result.split(b"\0") if path)
@@ -330,16 +376,20 @@ def link_failures(vault: Path, paths: list[str]) -> list[str]:
     return failures
 
 
-def check(vault: Path, config_path: Path, index_path: Path) -> dict:
+def check(vault: Path, config_path: Path, index_dir: Path) -> dict:
     config = load_config(config_path)
     verify_protected(vault, config)
     model = build_model(vault, config_path)
-    if not index_path.is_file() or index_path.read_bytes() != canonical(model):
+    expected = index_bytes(model)
+    if (index_dir / "index.json").exists() or any(
+        not (index_dir / name).is_file() or (index_dir / name).read_bytes() != data
+        for name, data in expected.items()
+    ):
         raise IndexErrorWithContext("index missing or stale; run build")
     failures = link_failures(vault, config.get("critical_pages", []))
     if failures:
         raise IndexErrorWithContext("critical links invalid:\n" + "\n".join(failures))
-    return model
+    return read_index(index_dir)
 
 
 def query(model: dict, vault: Path, term: str, args: argparse.Namespace) -> list[dict]:
@@ -355,8 +405,11 @@ def query(model: dict, vault: Path, term: str, args: argparse.Namespace) -> list
             continue
         if args.snapshot and doc["snapshot"] != args.snapshot:
             continue
-        if not args.snapshot and not args.include_candidate and doc["class"] in ("candidate", "historical") and doc["id"].casefold() != needle:
-            continue
+        if not args.snapshot:
+            if doc["class"] == "candidate" and not args.include_candidate:
+                continue
+            if doc["class"] == "historical" and not args.include_history:
+                continue
         names = [doc["id"], doc["title"], *doc["aliases"]]
         if needle in [value.casefold() for value in names]:
             exact.append(doc)
@@ -375,7 +428,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--vault", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument("--config", type=Path)
-    parser.add_argument("--index", type=Path)
+    parser.add_argument("--index-dir", type=Path)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("build")
     commands.add_parser("check")
@@ -386,27 +439,25 @@ def main(argv: list[str] | None = None) -> int:
     search.add_argument("--scope")
     search.add_argument("--snapshot")
     search.add_argument("--include-candidate", action="store_true")
+    search.add_argument("--include-history", action="store_true")
     search.add_argument("--limit", type=int, default=10)
     args = parser.parse_args(argv)
     vault = args.vault.resolve()
     config = args.config or vault / "00_System/AI_Index/config.json"
-    index = args.index or vault / "00_System/AI_Index/index.json"
+    index_dir = args.index_dir or vault / "00_System/AI_Index"
     try:
         if args.command == "build":
             model = build_model(vault, config)
             verify_protected(vault, load_config(config))
-            data = canonical(model)
-            temporary = index.with_suffix(".tmp")
-            temporary.write_bytes(data)
-            os.replace(temporary, index)
+            write_index(index_dir, model)
             print(f"indexed {len(model['documents'])} documents")
         elif args.command == "check":
-            model = check(vault, config, index)
+            model = check(vault, config, index_dir)
             print(f"PASS: {len(model['documents'])} documents; immutable history and critical links verified")
         else:
             if args.limit < 1 or args.limit > 100:
                 raise IndexErrorWithContext("limit must be 1..100")
-            model = check(vault, config, index)
+            model = check(vault, config, index_dir)
             print(json.dumps(query(model, vault, args.term, args), ensure_ascii=False, indent=2))
     except (IndexErrorWithContext, OSError, UnicodeError, json.JSONDecodeError, subprocess.CalledProcessError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

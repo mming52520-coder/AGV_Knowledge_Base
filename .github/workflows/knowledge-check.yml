@@ -31,3 +31,13 @@ jobs:
           python3 -m unittest discover -s 00_System/Graph_History/Tools/obsidian_projection -p 'test_*.py' -v
       - name: Check index, links, and immutable history
         run: python3 00_System/AI_Index/kb_index.py check
+      - name: Verify deterministic index files
+        run: |
+          sha256sum 00_System/AI_Index/manifest.json 00_System/AI_Index/documents.jsonl 00_System/AI_Index/relations.jsonl > /tmp/kb-index-before.sha256
+          python3 00_System/AI_Index/kb_index.py build
+          sha256sum 00_System/AI_Index/manifest.json 00_System/AI_Index/documents.jsonl 00_System/AI_Index/relations.jsonl > /tmp/kb-index-once.sha256
+          python3 00_System/AI_Index/kb_index.py build
+          sha256sum 00_System/AI_Index/manifest.json 00_System/AI_Index/documents.jsonl 00_System/AI_Index/relations.jsonl > /tmp/kb-index-twice.sha256
+          cmp /tmp/kb-index-before.sha256 /tmp/kb-index-once.sha256
+          cmp /tmp/kb-index-once.sha256 /tmp/kb-index-twice.sha256
+          git diff --exit-code -- 00_System/AI_Index/manifest.json 00_System/AI_Index/documents.jsonl 00_System/AI_Index/relations.jsonl

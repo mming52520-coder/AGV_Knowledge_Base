@@ -1,0 +1,10 @@
+{
+  "candidate_snapshot": "code-v2-aef23b8c-wt-03fcd3118087",
+  "current_snapshot": "code-v1-e8a1b3d",
+  "document_count": 654,
+  "documents_sha256": "40964a8ddc3a7dab572c972921bce8078d6c6822b96e6b37275bcf665caca0b5",
+  "relation_count": 5,
+  "relations_sha256": "95cdb648509fc0352748abaa8ca35f8ba9f11b81cd9b70230e2293a94d8783b7",
+  "schema_version": 1,
+  "tool_version": "1.0"
+}

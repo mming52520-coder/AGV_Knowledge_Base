@@ -22,7 +22,7 @@ class IndexTests(unittest.TestCase):
         )
         self.write("a.md", '---\nid: "doc:a"\ntype: ros_node\nproject: AGV\n---\n# 左侧循墙\n\n正文。\n')
         self.config_path = self.vault / "config.json"
-        self.index_path = self.vault / "index.json"
+        self.index_dir = self.vault / "index"
         self.config = {
             "schema_version": 1,
             "protected_tree_sha256": kb.protected_digest(self.vault),
@@ -46,12 +46,21 @@ class IndexTests(unittest.TestCase):
 
     def build(self):
         model = kb.build_model(self.vault, self.config_path)
-        self.index_path.write_bytes(kb.canonical(model))
+        kb.write_index(self.index_dir, model)
         return model
+
+    def query_args(self, **overrides):
+        defaults = dict(project=None, vehicle=None, scope=None, snapshot=None,
+                        include_candidate=False, include_history=False, limit=10)
+        defaults.update(overrides)
+        return argparse.Namespace(**defaults)
 
     def test_build_is_deterministic_and_move_keeps_identity(self):
         first = self.build()
-        self.assertEqual(kb.canonical(first), kb.canonical(kb.build_model(self.vault, self.config_path)))
+        first_bytes = {name: (self.index_dir / name).read_bytes() for name in kb.INDEX_FILES}
+        self.build()
+        self.assertEqual(first_bytes, {name: (self.index_dir / name).read_bytes() for name in kb.INDEX_FILES})
+        self.assertEqual(first, kb.check(self.vault, self.config_path, self.index_dir))
         self.write("folder/.keep", "")
         (self.vault / "a.md").rename(self.vault / "folder/a-renamed.md")
         moved = kb.build_model(self.vault, self.config_path)
@@ -77,7 +86,9 @@ class IndexTests(unittest.TestCase):
                 f'snapshot_instance_id: "{snapshot}::node:x"\nproject: AGV\n---\n# 左侧循墙\n',
             )
         model = self.build()
-        args = argparse.Namespace(project=None, vehicle=None, scope=None, snapshot=None, include_candidate=False, limit=10)
+        args = self.query_args()
+        self.assertEqual(next(doc for doc in model["documents"] if doc["id"] == "v1::node:x")["class"], "current_snapshot")
+        self.assertEqual(next(doc for doc in model["documents"] if doc["id"] == "v2::node:x")["class"], "candidate")
         self.assertEqual(
             [item["id"] for item in kb.query(model, self.vault, "左侧循墙", args)],
             ["doc:a", "v1::node:x"],
@@ -87,6 +98,10 @@ class IndexTests(unittest.TestCase):
             [item["id"] for item in kb.query(model, self.vault, "左侧循墙", args)],
             ["v2::node:x"],
         )
+        args.snapshot = None
+        self.assertEqual(kb.query(model, self.vault, "v2::node:x", args), [])
+        args.include_candidate = True
+        self.assertEqual([item["id"] for item in kb.query(model, self.vault, "v2::node:x", args)], ["v2::node:x"])
         self.write(
             "v2.md",
             '---\nid: "v2::node:x"\ntype: graph_entity_instance\n'
@@ -96,6 +111,50 @@ class IndexTests(unittest.TestCase):
         with self.assertRaisesRegex(kb.IndexErrorWithContext, "invalid instance key"):
             kb.build_model(self.vault, self.config_path)
 
+    def test_logical_page_never_becomes_current_implementation(self):
+        logical = {"path": "03_ROS/Nodes/left_wall_node.md", "type": "ros_node", "snapshot": None}
+        v1 = {"path": "00_System/Graph_History/Snapshots/v1/Entities/Nodes/left.md",
+              "type": "graph_entity_instance", "snapshot": "v1"}
+        v2 = {**v1, "path": "00_System/Graph_History/Snapshots/v2/Entities/Nodes/left.md", "snapshot": "v2"}
+        change = {"path": "00_System/Graph_History/Changes/v1__v2/left.md",
+                  "type": "graph_change", "snapshot": None}
+        for current, candidate in (("v1", "v2"), ("v2", "v1")):
+            pointer = {"current_snapshot": current, "candidate_snapshot": candidate}
+            self.assertEqual(kb.classify(logical, pointer), "logical_reference")
+            self.assertEqual(kb.classify(v1 if current == "v1" else v2, pointer), "current_snapshot")
+            self.assertEqual(kb.classify(v2 if current == "v1" else v1, pointer), "candidate")
+            self.assertEqual(kb.classify(change, pointer), "historical")
+        self.assertEqual(kb.classify({"path": "04_Navigation/topic.md", "type": "algorithm", "snapshot": None},
+                                     pointer), "document")
+
+    def test_logical_reference_and_history_query_boundaries(self):
+        self.write("03_ROS/Nodes/ultrasonic_follower.md",
+                   '---\nid: "node:logical"\ntype: ros_node\n---\n# 左侧循墙\n')
+        self.write("00_System/Graph_History/Changes/v1__v2/change.md",
+                   '---\nid: "change:old"\ntype: graph_change\n---\n# 左侧循墙\n')
+        model = self.build()
+        args = self.query_args()
+        result = kb.query(kb.check(self.vault, self.config_path, self.index_dir), self.vault, "左侧循墙", args)
+        self.assertEqual([(item["id"], item["class"]) for item in result],
+                         [("doc:a", "document"), ("node:logical", "logical_reference")])
+        self.assertEqual(kb.query(model, self.vault, "change:old", args), [])
+        args.include_candidate = True
+        self.assertEqual(kb.query(model, self.vault, "change:old", args), [])
+        args.include_history = True
+        self.assertEqual([item["id"] for item in kb.query(model, self.vault, "change:old", args)], ["change:old"])
+
+    def test_index_files_and_query_are_checked_on_disk(self):
+        model = self.build()
+        self.assertEqual(set(kb.INDEX_FILES), {path.name for path in self.index_dir.iterdir()})
+        self.assertEqual(model, kb.check(self.vault, self.config_path, self.index_dir))
+        (self.index_dir / "documents.jsonl").write_bytes(b"{}\n")
+        with self.assertRaisesRegex(kb.IndexErrorWithContext, "stale"):
+            kb.check(self.vault, self.config_path, self.index_dir)
+        self.build()
+        (self.index_dir / "index.json").write_bytes(b"{}\n")
+        with self.assertRaisesRegex(kb.IndexErrorWithContext, "stale"):
+            kb.check(self.vault, self.config_path, self.index_dir)
+
     def test_alias_keyword_ambiguity_and_missing_result(self):
         self.write("b.md", '---\nid: "doc:b"\nproject: Other\n---\n# 左侧循墙\n')
         self.config["enrichments"] = {"doc:a": {
@@ -104,7 +163,7 @@ class IndexTests(unittest.TestCase):
         }}
         self.save_config()
         model = self.build()
-        args = argparse.Namespace(project=None, vehicle=None, scope=None, snapshot=None, include_candidate=False, limit=10)
+        args = self.query_args()
         self.assertEqual(
             [item["id"] for item in kb.query(model, self.vault, "双超声", args)],
             ["doc:a"],
@@ -128,15 +187,15 @@ class IndexTests(unittest.TestCase):
         }}
         self.save_config()
         self.build()
-        kb.check(self.vault, self.config_path, self.index_path)
+        kb.check(self.vault, self.config_path, self.index_dir)
         self.write("evidence.md", "---\nid: doc:e\n---\n# 证据\n发生变化。\n")
         with self.assertRaisesRegex(kb.IndexErrorWithContext, "stale"):
-            kb.check(self.vault, self.config_path, self.index_path)
+            kb.check(self.vault, self.config_path, self.index_dir)
         self.build()
-        kb.check(self.vault, self.config_path, self.index_path)
+        kb.check(self.vault, self.config_path, self.index_dir)
         self.write("a.md", '---\nid: "doc:a"\n---\n# 改动后的标题\n')
         with self.assertRaisesRegex(kb.IndexErrorWithContext, "stale"):
-            kb.check(self.vault, self.config_path, self.index_path)
+            kb.check(self.vault, self.config_path, self.index_dir)
         (self.vault / "evidence.md").unlink()
         with self.assertRaisesRegex(kb.IndexErrorWithContext, "missing or unsafe evidence"):
             kb.build_model(self.vault, self.config_path)
@@ -145,14 +204,14 @@ class IndexTests(unittest.TestCase):
         self.build()
         self.write("00_System/Graph_History/current.json", '{"current_snapshot":"v2","candidate_snapshot":"v1"}\n')
         with self.assertRaisesRegex(kb.IndexErrorWithContext, "immutable"):
-            kb.check(self.vault, self.config_path, self.index_path)
+            kb.check(self.vault, self.config_path, self.index_dir)
 
     def test_missing_protected_tag_fails(self):
         self.build()
         self.config["protected_tags"] = {"missing": "0" * 40}
         self.save_config()
         with self.assertRaisesRegex(kb.IndexErrorWithContext, "tag changed or missing"):
-            kb.check(self.vault, self.config_path, self.index_path)
+            kb.check(self.vault, self.config_path, self.index_dir)
 
     def test_snapshot_machine_data_supplies_scoped_reference(self):
         self.write(

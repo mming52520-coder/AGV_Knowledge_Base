@@ -1,0 +1,5 @@
+{"from":"agv:navigation:left-dual-ultrasonic-wall-following","relation":"candidate_code_reference","to":"code-v2-aef23b8c-wt-03fcd3118087::agv:ros:node:left_wall_node"}
+{"from":"agv:navigation:left-dual-ultrasonic-wall-following","relation":"hardware_reference","to":"agv:hardware:dyp-a21-ultrasonic"}
+{"from":"agv:navigation:left-dual-ultrasonic-wall-following","relation":"historical_code_reference","to":"agv:ros:node:ultrasonic_follower"}
+{"from":"agv:navigation:left-dual-ultrasonic-wall-following","relation":"planned_reference","to":"agv:claim:ackermann-multimode-design-proposal"}
+{"from":"agv:navigation:left-dual-ultrasonic-wall-following","relation":"related_context","to":"agv:navigation:ultrasonic-safety"}

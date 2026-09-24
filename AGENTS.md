@@ -40,7 +40,7 @@ This repository is the engineering knowledge base for mobile robot R&D. Windows 
 
 ## Git rules
 
-- The owner currently requires this repository to remain Public. Check content sensitivity before publishing; do not change visibility or repository protection settings during a knowledge task.
+- The owner's current instruction is to keep this repository Public. Visibility is an explicit repository-level decision; check content sensitivity before publishing. Public branches cannot provide confidentiality. Do not change visibility, security rules, or repository protection settings without explicit authorization.
 - Keep main as the reviewed knowledge line. It does not imply robot or vehicle validation.
 - Use short-lived docs/*, feature/*, fix/*, or chore/* branches for one task. Do not maintain permanent human/AI, per-computer, or develop branches.
 - Windows and Ubuntu hand off the same task branch sequentially. Parallel sessions use separate worktrees and named file boundaries.
