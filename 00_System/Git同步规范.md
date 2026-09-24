@@ -13,11 +13,22 @@ tags:
 
 ## 总体原则
 
-- 远程仓库必须为 Private，并使用一个不带 README、License 或 `.gitignore` 的空仓库接收首次推送。
+- 仓库负责人已明确要求当前 GitHub 仓库保持 Public。可见性是负责人显式决定的仓库级策略；发布前复核当前 visibility、来源权限、敏感字段和历史影响。Public 仓库不能依靠分支实现保密隔离；AI 未获新授权不得自行更改 visibility 或改写安全规范来适配现状。本规范不授予任何资料再许可。
+- 冻结的 Graph_History/Tools/README.md 中关于 Private 的句子是历史工具包发布时的条件，为保持清单与树哈希不改写；当前仓库可见性以负责人本次决定为准。
 - Windows 是 Obsidian 笔记和 `.obsidian` 配置的主要写入端。
 - Ubuntu Codex 主要读取方案并回写代码分析、接口说明和测试结果。
 - 两端不要同时编辑同一篇笔记。
 - 有未提交修改时，不自动拉取、变基、合并或丢弃内容。
+- main 为经过审查的知识主线，不代表其中描述的机器人能力已获实车验证。
+
+## 任务分支与审查
+
+- 每项任务从已核对的 main 建立短期 docs/*、feature/*、fix/* 或 chore/* 分支；完成后通过 PR 审查再合并。不要建立长期 develop、human/ai 或按电脑、人员、车型划分的常驻分支。
+- AI 只在获授权的任务分支提交、推送；main 的合并由负责人审核。一个任务可以用多个清晰提交，但不得混入机器人源码或其他任务。
+- Windows 和 Ubuntu 顺序交接同一任务分支。多个会话使用独立目录或 worktree，并划定修改文件。
+- 开始同步先检查状态与远端分叉；工作区干净且适用时才执行 git pull --ff-only。若发生分叉或冲突，停止自动处理，保留两侧内容。
+- 既有标签和历史快照保持不变；候选快照不能因 PR 合并自动升级为验收通过。
+- PR 使用 .github/pull_request_template.md 核对范围、证据、验证、历史保护和回退。主线规则的待应用方案见 [[GitHub主线保护待应用]]。
 
 ## Windows 开始工作
 
@@ -34,7 +45,7 @@ git pull --ff-only
 ```powershell
 git status
 git diff
-git add .
+git add <本次任务明确修改的文件>
 git diff --staged
 git commit -m "docs: describe the completed knowledge change"
 git push

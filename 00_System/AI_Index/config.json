@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "protected_tree_sha256": "2c4ae44643a2cf70c66bf874f8d9184f83d773c91213ce7046d80a0fd9e63237",
+  "protected_tags": {
+    "kg-code-v1-e8a1b3d": "e8a1b3dee1b67039624da73f1e5a874f4fa61ba1",
+    "kg-code-v2-aef23b8c-wt-03fcd3118087": "e94282140be09c8dd7d4130aba8c62debfc7ef70"
+  },
+  "critical_pages": [
+    "README.md",
+    "AGENTS.md",
+    "知识库首页.md",
+    "04_Navigation/左侧双超声循墙.md",
+    "00_System/AI_Index/README.md",
+    "00_System/Git同步规范.md",
+    "00_System/知识图谱Schema.md",
+    "00_System/GitHub主线保护待应用.md",
+    "00_System/任务工作记忆.md",
+    "Templates/知识节点模板.md"
+  ],
+  "enrichments": {
+    "agv:navigation:left-dual-ultrasonic-wall-following": {
+      "aliases": ["双超声左侧循墙", "左侧循墙", "left-wall following"],
+      "summary": "左侧双超声循墙的证据导航样板；现有归档证据不足以证明双传感器实装、测试运行或实车验证。",
+      "evidence": [
+        {
+          "path": "03_ROS/Nodes/ultrasonic_follower.md",
+          "locator": "职责、通信接口、源码证据",
+          "kind": "archived-code-note",
+          "state": "static-reference",
+          "summary": "V1 逻辑节点记录左右超声循墙建议和旧控制 Topic；不证明本专题的双左侧配置。"
+        },
+        {
+          "path": "00_System/Graph_History/Snapshots/code-v2-aef23b8c-wt-03fcd3118087/Entities/Nodes/left_wall_node--fdb9bf57d711.md",
+          "locator": "证据、出向关系",
+          "kind": "candidate-snapshot",
+          "state": "candidate-pending-review",
+          "summary": "V2 候选快照记录 left_wall_node 静态抽取；原始源码在本仓库不可访问。"
+        },
+        {
+          "path": "11_Engineering_Materials/Entities/多模式方案提出磁钉、超声与预录轨协同.md",
+          "locator": "原子结论、证据与限制",
+          "kind": "design-proposal",
+          "state": "planned-only",
+          "summary": "多模式方案提及超声沿墙控制，仅属于提案。"
+        },
+        {
+          "path": "02_Hardware/DYP-A21超声传感器.md",
+          "locator": "风险与来源",
+          "kind": "hardware-note",
+          "state": "document-reference",
+          "summary": "传感器型号和风险参考；不能推导左侧双传感器的实际安装。"
+        }
+      ]
+    }
+  },
+  "relations": [
+    {"from": "agv:navigation:left-dual-ultrasonic-wall-following", "relation": "related_context", "to": "agv:navigation:ultrasonic-safety"},
+    {"from": "agv:navigation:left-dual-ultrasonic-wall-following", "relation": "historical_code_reference", "to": "agv:ros:node:ultrasonic_follower"},
+    {"from": "agv:navigation:left-dual-ultrasonic-wall-following", "relation": "candidate_code_reference", "to": "code-v2-aef23b8c-wt-03fcd3118087::agv:ros:node:left_wall_node"},
+    {"from": "agv:navigation:left-dual-ultrasonic-wall-following", "relation": "hardware_reference", "to": "agv:hardware:dyp-a21-ultrasonic"},
+    {"from": "agv:navigation:left-dual-ultrasonic-wall-following", "relation": "planned_reference", "to": "agv:claim:ackermann-multimode-design-proposal"}
+  ]
+}
