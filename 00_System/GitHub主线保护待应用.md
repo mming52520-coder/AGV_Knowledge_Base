@@ -16,7 +16,9 @@ tags: [GitHub, 分支治理]
 
 1. 仅针对 main 建立分支规则：通过 PR 合并，禁止强制推送和删除，要求对话已解决。
 2. 单人维护阶段不要设置无法由其他人完成的强制自我批准。待有合适审查人后再设置审批人数。
-3. 本轮 CI 的检查名须在真实 PR 运行后确认，再将该稳定检查列为 required。不要在检查尚未产生时猜测名称并启用。
+3. PR #1 的真实 Actions 运行已确认检查名为 knowledge-check，push 与 pull_request 两次运行均为 success。负责人复核该工作流和保护范围后，可考虑将 knowledge-check 列为 required；本轮未应用该设置。
 4. 建议保留普通 merge commit；不要同时设置要求线性历史。启用前复查已有规则及功能，避免覆盖更严格的配置。
 
 本轮没有改写仓库 Ruleset、Branch Protection、成员权限或合并设置。负责人应用规则后，应在网页确认作用范围与执行状态，并用一条受控 PR 验证不能直接绕过。
+
+已观察的运行证据：[PR 检查](https://github.com/mming52520-coder/AGV_Knowledge_Base/actions/runs/35963134499)、[分支推送检查](https://github.com/mming52520-coder/AGV_Knowledge_Base/actions/runs/35963080363)。
